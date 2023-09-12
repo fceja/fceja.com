@@ -1,0 +1,15 @@
+#cards-container {
+  white-space: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+[class*="icon"] {
+  height: 100px;
+  width: 50px;
+  color: gray;
+}
