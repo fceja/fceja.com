@@ -3,7 +3,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Stack from "react-bootstrap/Stack";
 
 import "styles/components/CardCarousel.scss";
-import Card from "./Card";
+import Card from "ts/components/Card";
 import { CardCarouselPropsType } from "ts/types/index";
 import { ScrollLeftOrRight } from "ts/scripts/ScrollLeftOrRight";
 

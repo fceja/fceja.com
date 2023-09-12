@@ -1,8 +1,8 @@
 import Container from "react-bootstrap/Container";
 
 import "styles/pages/HomePage.scss";
-import { CardData } from "../data/CardData";
-import CardCarousel from "../components/CardCarousel";
+import { CardData } from "ts/data/CardData";
+import CardCarousel from "ts/components/CardCarousel";
 
 const HomePage = () => {
   return (

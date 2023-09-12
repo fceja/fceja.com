@@ -1,4 +1,4 @@
-@import "../variables";
+@import "styles/variables";
 
 @media (min-width: $breakpoint-zero) and (max-width: calc($breakpoint-xs + 20px)) {
   .card {
