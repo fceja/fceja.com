@@ -25,7 +25,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "echo - aws s3 cp hello.txt ${S3_DEV}"
+                echo "echo - aws s3 cp hello.txt s3://${S3_DEV}"
                 script {
                     sh "aws s3 cp hello.txt ${S3_DEV}"
                 }
