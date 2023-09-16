@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'github_aws' } }
 
     stages {
         stage("Checkout") {
@@ -19,6 +19,15 @@ pipeline {
                 echo 'creating build'
                 script {
                     sh 'npm run build'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "echo - aws s3 cp hello.txt ${S3_DEV}"
+                script {
+                    sh "aws s3 cp hello.txt ${S3_DEV}"
                 }
             }
         }
