@@ -1,7 +1,9 @@
 node {
 
     echo 'entered Jenkins'
-    echo 'env -  ${env.BRANCH_NAME}'
+    echo "env -  ${env.BRANCH_NAME}"
+    echo "${env}"
+    echo "${env.BRANCH_NAME}"
     echo env
     echo env.BRANCH_NAME
     def envJenkinsfile
