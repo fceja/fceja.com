@@ -1,12 +1,12 @@
 node {
-    def jenkinsfile
+    def envJenkinsfile
 
     if (env.BRANCH_NAME.equals('dev')) {
-        jenkinsfile = 'dev.Jenkinsfile'
+        envJenkinsfile = 'dev.Jenkinsfile'
     } else {
         echo "Branch does not match any enviornment"
         return
     }
 
-    load jenkinsfile
+    load envJenkinsfile
 }
