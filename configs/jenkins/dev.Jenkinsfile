@@ -7,6 +7,7 @@ pipeline {
                 echo 'dev.Jenkinsfile loaded'
                 echo 'env branch name ${env.BRANCH_NAME}'
             }
+        }
     }
 }
 
