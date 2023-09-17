@@ -11,6 +11,7 @@ node {
 
     echo "loading envJenkinsfile"
     // load envJenkinsfile
-    load 'configs/jenkins/dev.Jenkinsfile'
+    // load 'configs/jenkins/dev.Jenkinsfile'
+    load './dev.Jenkinsfile'
     echo "done loading envJenkinsfile"
 }
