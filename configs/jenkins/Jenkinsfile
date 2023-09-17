@@ -2,10 +2,13 @@ node {
 
     echo 'entered Jenkins'
     echo "env -  ${env.BRANCH_NAME}"
-    echo "${env}"
-    echo "${env.BRANCH_NAME}"
+    echo "1 - ${env}"
+    echo "2 - ${env.BRANCH_NAME.toString()}"
+    echo "3"
     echo env
+    echo "4"
     echo env.BRANCH_NAME
+    echo "5"
     def envJenkinsfile
 
 
