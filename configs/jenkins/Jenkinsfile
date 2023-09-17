@@ -1,7 +1,7 @@
 node {
     if (env.BRANCH_NAME.equals('dev')) {
         echo "enetered in dev branch"
-        envJenkinsfile = '/configs/jenkins/dev.Jenkinsfile'
+        envJenkinsfile = 'configs/jenkins/dev.Jenkinsfile'
         echo "envJenkins file ${envJenkinsfile}"
 
     } else {
