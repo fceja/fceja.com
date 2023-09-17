@@ -7,6 +7,9 @@ pipeline {
                 echo 'dev.Jenkinsfile loaded'
                 echo 'env branch name ${env.BRANCH_NAME}'
             }
+    }
+}
+
         // stage("Checkout") {
         //     // checkout shallow version of git repo
         //     steps {
@@ -51,5 +54,3 @@ pipeline {
         //         sh 'aws --version'
         //     }
         // }
-    }
-}
