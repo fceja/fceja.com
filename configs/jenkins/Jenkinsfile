@@ -9,9 +9,12 @@ node {
         return
     }
 
+    echo "result - ${env.JENKINSFILE_ENV_PATH}/dev.Jenkinsfile"
     echo "loading envJenkinsfile"
     // load envJenkinsfile
     // load 'configs/jenkins/dev.Jenkinsfile'
-    load './dev.Jenkinsfile'
+    // load './dev.Jenkinsfile'
+    // load './dev.Jenkinsfile'
+    load "${env.JENKINSFILE_ENV_PATH}/dev.Jenkinsfile"
     echo "done loading envJenkinsfile"
 }
