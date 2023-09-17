@@ -10,11 +10,15 @@ node {
 
 
     if (env.BRANCH_NAME.equals('dev')) {
+        echo "enetered in dev branch"
         envJenkinsfile = 'dev.Jenkinsfile'
+        echo "envJenkins file ${envJenkinsfile}"
+
     } else {
         echo "Branch does not match any enviornment"
         return
     }
 
+    echo "loading envJenkinsfile"
     load envJenkinsfile
 }
