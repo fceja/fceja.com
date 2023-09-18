@@ -2,8 +2,17 @@ node {
 
     def envJenkinsfilePath
 
-    if (env.BRANCH_NAME.equals('dev')) {
+    if (env.BRANCH_NAME.equals('local')) {
+        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/local.Jenkinsfile"
+
+    } else if (env.BRANCH_NAME.equals('dev')) {
         envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/dev.Jenkinsfile"
+
+    } else if (env.BRANCH_NAME.equals('stage')) {
+        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/stage.Jenkinsfile"
+
+    } else if (env.BRANCH_NAME.equals('prod')) {
+        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/prod.Jenkinsfile"
 
     } else {
         echo "Branch environment does not exist"
