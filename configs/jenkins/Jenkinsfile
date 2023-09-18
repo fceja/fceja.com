@@ -1,4 +1,4 @@
-node {
+node ('github_aws_agent') {
 
     def envJenkinsfilePath
     echo "env - ${env.BRANCH_NAME.toString()}"
