@@ -1,4 +1,6 @@
-node (env.AGENT_LABEL) {
+node {
+    // define jenkins node/agent to be executed by
+    label "${env.AGENT_LABEL}"
 
     def envJenkinsfilePath
     def existingEnvsArray = env.EXISTING_ENVS.split(',')
