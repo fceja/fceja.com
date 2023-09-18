@@ -1,24 +1,17 @@
-node {
-
+// jenkins node/agent to be executed by
+node (env.NODE_AGENT_1){
+    // init vars
     def envJenkinsfilePath
+    def existingEnvsArray = env.EXISTING_ENVS.split(',')
 
-    if (env.BRANCH_NAME.equals('local')) {
-        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/local.Jenkinsfile"
-
-    } else if (env.BRANCH_NAME.equals('dev')) {
-        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/dev.Jenkinsfile"
-
-    } else if (env.BRANCH_NAME.equals('stage')) {
-        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/stage.Jenkinsfile"
-
-    } else if (env.BRANCH_NAME.equals('prod')) {
-        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/prod.Jenkinsfile"
-
+    // check if branch environment exists
+    if (existingEnvsArray.contains(env.BRANCH_NAME)) {
+        envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/${env.BRANCH_NAME}.Jenkinsfile"
     } else {
         echo "Branch environment does not exist"
         return
     }
 
+    // load existing environment jenkinsfile
     load envJenkinsfilePath
-
 }

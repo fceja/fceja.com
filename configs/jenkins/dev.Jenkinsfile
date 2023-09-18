@@ -1,6 +1,10 @@
 pipeline {
-    agent { node { label 'github_aws_agent' } }
+    // define jenkins node/agent to be executed by
+    agent { node { label "${env.AGENT_LABEL}" } }
+
+    // stages to execute
     stages {
+        // building stage
         stage('Build') {
             steps {
                 // install dependencies
@@ -17,6 +21,7 @@ pipeline {
             }
         }
 
+        // aws stage
         stage('AWS S3') {
             // init docker aws-cli
             agent {
