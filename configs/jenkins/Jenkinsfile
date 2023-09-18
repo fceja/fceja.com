@@ -1,4 +1,7 @@
 node {
+
+    def envJenkinsfilePath
+
     if (env.BRANCH_NAME.equals('dev')) {
         envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/dev.Jenkinsfile"
 
