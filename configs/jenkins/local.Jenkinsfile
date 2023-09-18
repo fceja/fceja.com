@@ -1,6 +1,6 @@
 pipeline {
     // define jenkins node/agent to be executed by
-    agent { node { label "${env.AGENT_LABEL}" } }
+    agent { node { label env.NODE_AGENT_1 } }
 
     stages {
         stage('TODO - testing') {
