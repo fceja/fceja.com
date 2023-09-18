@@ -1,4 +1,5 @@
 pipeline {
+    // define jenkins node/agent to be executed by
     agent { node { label 'github_aws_agent' } }
     stages {
         stage('Build') {

@@ -1,11 +1,14 @@
 node {
 
     def envJenkinsfilePath
+    echo "env - ${env.BRANCH_NAME.toString()}"
 
     if (env.BRANCH_NAME.equals('local')) {
+        echo "entered local"
         envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/local.Jenkinsfile"
 
     } else if (env.BRANCH_NAME.equals('dev')) {
+        echo "entered dev"
         envJenkinsfilePath = "${env.ENV_JENKINSFILE_PATH}/dev.Jenkinsfile"
 
     } else if (env.BRANCH_NAME.equals('stage')) {
@@ -19,6 +22,8 @@ node {
         return
     }
 
+    echo "load envJenkinsfilePath - ${envJenkinsfilePath}"
     load envJenkinsfilePath
+    echo "done loading"
 
 }
