@@ -26,9 +26,11 @@ pipeline {
         stage('AWS S3') {
             // create docker image
             agent {
-                dockerfile {
-                    filename 'dev.Dockerfile'
-                    dir env.DOCKERFILE_DIR
+                node ('github_aws_agent') {
+                    dockerfile {
+                        filename 'dev.Dockerfile'
+                        dir env.DOCKERFILE_DIR
+                    }
                 }
             }
 
