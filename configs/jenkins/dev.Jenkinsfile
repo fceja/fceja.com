@@ -25,9 +25,12 @@ pipeline {
         stage('AWS S3') {
             // init docker aws-cli
             agent {
-                dockerfile {
-                    filename 'dev.Dockerfile'
-                    dir env.DOCKERFILE_DIR
+                // define jenkins node/agent to execute docker functions
+                node (env.NODE_AGENT_1) {
+                    dockerfile {
+                        filename 'dev.Dockerfile'
+                        dir env.DOCKERFILE_DIR
+                    }
                 }
             }
 
