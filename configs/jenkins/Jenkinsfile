@@ -10,7 +10,6 @@ node {
         return
     }
 
-    def envScript = load envJenkinsfilePath
+    load envJenkinsfilePath
 
-    envScript.run()
 }
