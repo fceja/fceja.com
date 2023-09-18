@@ -1,5 +1,5 @@
 // jenkins node/agent to be executed by
-node (env.NODE_AGENT_1){
+node (env.NODE_AGENT_1) {
     // init vars
     def envJenkinsfilePath
     def existingEnvsArray = env.EXISTING_ENVS.split(',')
