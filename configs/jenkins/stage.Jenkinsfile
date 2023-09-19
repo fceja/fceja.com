@@ -21,20 +21,33 @@ pipeline {
             }
         }
 
-        // aws stage
-        stage('AWS S3') {
-            // init docker aws-cli
-            agent {
-                dockerfile {
-                    filename 'stage.Dockerfile'
-                    dir env.DOCKERFILE_DIR
+        // Init AWS cli stage
+        stage('Init AWS CLI') {
+            steps {
+                script {
+                    // define the parameters to pass to pipeline
+                    def params = [
+                        [$class: 'StringParameterValue', name: 'DOCKERFILE_NAME', value: "${env.BRANCH_NAME}.Dockerfile"],
+                        [$class: 'StringParameterValue', name: 'DOCKERFILE_DIR', value: "${env.DOCKERFILE_DIR}"]
+                    ]
+
+                    // trigger pipeline - create docker image by dockerfile
+                    build job: env.CREATE_DOCKER_IMAGE, parameters: params
+
+                    sh 'aws --version'
                 }
             }
+        }
 
+        stage('AWS - User Role') {
             steps {
-                // temp - execute aws cli commands
-                echo 'attempting aws version'
-                sh 'aws --version'
+                echo 'TODO - AWS - User Role'
+            }
+        }
+
+        stage('AWS - Push to S3') {
+            steps {
+                echo 'TODO - AWS - Push to S3'
             }
         }
     }
