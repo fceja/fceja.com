@@ -27,8 +27,8 @@ pipeline {
                 script {
                     // define the parameters to pass to pipeline
                     def params = [
-                        [$class: 'StringParameterValue', name: 'DOCKERFILE_NAME', value: 'dev.Dockerfile'],
-                        [$class: 'StringParameterValue', name: 'DOCKERFILE_DIR', value: "${env.DOCKERFILE_DIR}"],
+                        [$class: 'StringParameterValue', name: 'DOCKERFILE_NAME', value: "${env.BRANCH_NAME}.Dockerfile"],
+                        [$class: 'StringParameterValue', name: 'DOCKERFILE_DIR', value: "${env.DOCKERFILE_DIR}"]
                     ]
 
                     // trigger pipeline - create docker image by dockerfile
