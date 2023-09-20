@@ -4,51 +4,31 @@ pipeline {
 
     // stages to execute
     stages {
-        // building stage
-        // stage('Build') {
-        //     steps {
-        //         // install dependencies
-        //         echo 'installing dependencies'
-        //         script {
-        //             sh 'npm install'
-        //         }
-
-        //         // create build
-        //         echo 'creating build'
-        //         script {
-        //             sh 'npm run build'
-        //         }
-        //     }
-        // }
-
-        // Init AWS cli stage
-        stage('Init AWS CLI') {
+        // build using npm
+        stage('Build') {
             steps {
+                // install dependencies
+                echo 'installing dependencies'
                 script {
-                    // define the parameters to pass to pipeline
-                    // def params = [
-                    //     [$class: 'StringParameterValue', name: 'DOCKERFILE_NAME', value: "${env.BRANCH_NAME}.Dockerfile"],
-                    //     [$class: 'StringParameterValue', name: 'DOCKERFILE_DIR', value: "${env.DOCKERFILE_DIR}"]
-                    // ]
+                    sh 'npm install'
+                }
 
-                    // // trigger pipeline - create docker image by dockerfile
-                    // build job: env.CREATE_DOCKER_IMAGE, parameters: params
-
-                    sh 'aws --version'
+                // create build
+                echo 'creating build'
+                script {
+                    sh 'npm run build'
                 }
             }
         }
 
-        // stage('AWS - User Role') {
-        //     steps {
-        //         echo 'TODO - AWS - User Role'
-        //     }
-        // }
-
-        // stage('AWS - Push to S3') {
-        //     steps {
-        //         echo 'TODO - AWS - Push to S3'
-        //     }
-        // }
+        // aws cli stage
+        stage('AWS S3') {
+            steps {
+                script {
+                    sh 'aws --version'
+                    sh "aws s3 cp ./hello.txt ${env.BRANCH_NAME}_S3_URL  --profile ${env.AWS_PROFILE}"
+                }
+            }
+        }
     }
 }
