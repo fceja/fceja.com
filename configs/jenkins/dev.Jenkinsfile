@@ -29,7 +29,7 @@ pipeline {
 
                     // parse branch name for environment
                     def envBranch = env.BRANCH_NAME.toUpperCase()
-                    def s3Url = env["${envBranch}_S3_URL"}
+                    def s3Url = env["${envBranch}_S3_URL"]
                     def awsProfile = env["${envBranch}_AWS_PROFILE"]
 
                     sh "aws s3 cp ./hello.txt ${s3Url}  --profile ${awsProfile}"
