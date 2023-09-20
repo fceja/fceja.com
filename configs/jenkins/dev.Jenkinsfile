@@ -5,8 +5,8 @@ pipeline {
     // declare env vars
     environment {
         // Define environment variables as maps
-        BRANCH_S3_URL = [:]
-        BRANCH_AWS_PROFILE = [:]
+        BRANCH_S3_URL = ""
+        BRANCH_AWS_PROFILE = ""
     }
 
     // stages to execute
@@ -15,10 +15,9 @@ pipeline {
         stage('Init') {
             steps {
                 script {
-                    // parse branch name for env vars
                     def envBranch = env.BRANCH_NAME.toUpperCase()
-                    BRANCH_S3_URL[envBranch] = env["${envBranch}_S3_URL"]
-                    BRANCH_AWS_PROFILE[envBranch] = env["${envBranch}_AWS_PROFILE"]
+                    env.BRANCH_S3_URL = env["${envBranch}_S3_URL"]
+                    env.BRANCH_AWS_PROFILE = env["${envBranch}_AWS_PROFILE"]
                 }
             }
         }
@@ -44,10 +43,9 @@ pipeline {
         stage('Push to AWS S3') {
             steps {
                 script {
-                    // Access environment variables based on branch name
-                    def envBranch = env.BRANCH_NAME.toUpperCase()
-                    def s3Url = BRANCH_S3_URL[envBranch]
-                    def awsProfile = BRANCH_AWS_PROFILE[envBranch]
+                    // generate cli command for env s3 bucket
+                    def s3Url = env.BRANCH_S3_URL
+                    def awsProfile = env.BRANCH_AWS_PROFILE
 
                     sh "aws s3 cp ./hello.txt ${s3Url} --profile ${awsProfile}"
                 }
