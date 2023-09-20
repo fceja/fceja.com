@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     sh 'aws --version'
-                    sh "aws s3 cp ./hello.txt ${env.BRANCH_NAME.toUpperCase()}_S3_URL  --profile ${env.AWS_PROFILE}"
+                    sh "aws s3 cp ./hello.txt ${env.BRANCH_NAME.toUpperCase()}_S3_URL  --profile ${env.BRANCH_NAME.toUpperCase()}_AWS_PROFILE"
                 }
             }
         }
