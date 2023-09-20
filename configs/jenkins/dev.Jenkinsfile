@@ -2,6 +2,13 @@ pipeline {
     // define jenkins node/agent to be executed by
     agent { node { label env.NODE_AGENT_1 } }
 
+    // declare env vars
+    environment {
+        // Define environment variables as maps
+        BRANCH_S3_URL = [:]
+        BRANCH_AWS_PROFILE = [:]
+    }
+
     // stages to execute
     stages {
         // initialize env vars
@@ -45,6 +52,15 @@ pipeline {
                     sh "aws s3 cp ./hello.txt ${s3Url} --profile ${awsProfile}"
                 }
             }
+        }
+    }
+
+    post {
+        success {
+            echo "Process successful."
+        }
+        failure {
+            echo "Process failed."
         }
     }
 }
