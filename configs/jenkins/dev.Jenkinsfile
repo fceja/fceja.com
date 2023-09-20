@@ -4,6 +4,18 @@ pipeline {
 
     // stages to execute
     stages {
+        // initialize env vars
+        stage('Init') {
+            steps {
+                script {
+                    // parse branch name for env vars
+                    def envBranch = env.BRANCH_NAME.toUpperCase()
+                    BRANCH_S3_URL[envBranch] = env["${envBranch}_S3_URL"]
+                    BRANCH_AWS_PROFILE[envBranch] = env["${envBranch}_AWS_PROFILE"]
+                }
+            }
+        }
+
         // build using npm
         stage('Build') {
             steps {
@@ -22,17 +34,15 @@ pipeline {
         }
 
         // aws cli stage
-        stage('AWS S3') {
+        stage('Push to AWS S3') {
             steps {
                 script {
-                    sh 'aws --version'
-
-                    // parse branch name for environment
+                    // Access environment variables based on branch name
                     def envBranch = env.BRANCH_NAME.toUpperCase()
-                    def s3Url = env["${envBranch}_S3_URL"]
-                    def awsProfile = env["${envBranch}_AWS_PROFILE"]
+                    def s3Url = BRANCH_S3_URL[envBranch]
+                    def awsProfile = BRANCH_AWS_PROFILE[envBranch]
 
-                    sh "aws s3 cp ./hello.txt ${s3Url}  --profile ${awsProfile}"
+                    sh "aws s3 cp ./hello.txt ${s3Url} --profile ${awsProfile}"
                 }
             }
         }
