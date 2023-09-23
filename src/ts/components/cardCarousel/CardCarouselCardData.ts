@@ -1,4 +1,4 @@
-export const CardData = Object.freeze([
+export const CardCarouselCardData = Object.freeze([
   {
     imagePath: require("assets/bingo.png"),
     title: "Bingo Card Game",
