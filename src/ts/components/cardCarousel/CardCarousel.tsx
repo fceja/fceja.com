@@ -9,7 +9,11 @@ import { ScrollLeftOrRight } from "ts/utils/pageActions/ScrollLeftOrRight";
 
 const CardCarousel: React.FC = () => {
   return (
-    <Stack className="card-carousel-container w-100" direction="horizontal">
+    <Stack
+      className="card-carousel-container w-100"
+      direction="horizontal"
+      data-id="card-carousel"
+    >
       <MdChevronLeft
         className="icon-left"
         onClick={() => ScrollLeftOrRight("left", "cards-container")}
