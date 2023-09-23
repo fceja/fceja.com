@@ -25,8 +25,8 @@ pipeline {
         stage('Depoly to AWS S3') {
             steps {
                 script {
-                    // push to aws s3 bucket
-                    sh "aws s3 cp ./hello.txt ${env.DEV_S3_URL} --profile ${env.DEV_AWS_PROFILE}"
+                    // sync build files to aws s3 bucket
+                    sh "aws s3 sync ./build ${env.DEV_S3_URL} --profile ${env.DEV_AWS_PROFILE}"
                 }
             }
         }
