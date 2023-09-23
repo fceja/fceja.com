@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 
-import "styles/pages/HomePage.scss";
-import { CardData } from "ts/data/CardData";
-import CardCarousel from "ts/components/CardCarousel";
+import "styles/pages/IndexPage.scss";
+import { CardData } from "ts/components/card/CardData";
+import CardCarousel from "ts/components/cardCarousel/CardCarousel";
 
-const HomePage = () => {
+const IndexPage = () => {
   return (
-    <Container fluid className="home-page p-0">
+    <Container fluid className="index-page p-0">
       <p className="intro p-2 m-0 w-100 text-center text-wrap d-flex justify-content-center align-items-center">
         Greetings, FC projects down below.
       </p>
@@ -15,4 +15,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default IndexPage;

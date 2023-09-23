@@ -3,9 +3,9 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Stack from "react-bootstrap/Stack";
 
 import "styles/components/CardCarousel.scss";
-import Card from "ts/components/Card";
+import Card from "ts/components/card/Card";
 import { CardCarouselPropsType } from "ts/types/index";
-import { ScrollLeftOrRight } from "ts/scripts/ScrollLeftOrRight";
+import { ScrollLeftOrRight } from "ts/utils/pageActions/ScrollLeftOrRight";
 
 const CardCarousel: React.FC<CardCarouselPropsType> = ({ cardData }) => {
   return (
