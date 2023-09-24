@@ -4,16 +4,29 @@ pipeline {
 
     // stages to execute
     stages {
-        // build using npm
-        stage('Build') {
+        // install npm packages
+        stage('Install NPM Packages') {
             steps {
-                // install dependencies
                 echo 'installing dependencies'
                 script {
                     sh 'npm install'
                 }
+            }
+        }
 
-                // create build
+        // test using jest framework
+        stage('Jest Testing') {
+            steps {
+                echo 'executing jest tests'
+                script {
+                    sh 'npm test'
+                }
+            }
+        }
+
+        // generate build
+        stage('Build') {
+            steps {
                 echo 'creating build'
                 script {
                     sh 'npm run build'
@@ -21,11 +34,10 @@ pipeline {
             }
         }
 
-        // aws cli stage
+        // sync build files to aws s3 bucket
         stage('Depoly to AWS S3') {
             steps {
                 script {
-                    // sync build files to aws s3 bucket
                     sh "aws s3 sync ./build ${env.DEV_S3_URL} --profile ${env.DEV_AWS_PROFILE}"
                 }
             }
