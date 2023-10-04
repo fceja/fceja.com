@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
-import IndexPage from "ts/pages/IndexPage";
+import IndexPage from "ts/pages/ProjectsPage";
 import { PAGE_PATHS } from "ts/common/Constants";
 
 const App = () => {
