@@ -10,8 +10,3 @@ export type CardType = {
 export type CardPropsType = {
   cardData: readonly CardType[];
 };
-
-// CardCarousel component
-export type CardCarouselPropsType = {
-  cardData: readonly CardType[];
-};

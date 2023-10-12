@@ -1,9 +1,9 @@
 // define page paths
 const ROOT_PATH = "";
 const PAGE_VALUES = Object.freeze({
-  HOME: "home",
+  INDEX: "/",
 });
 
 export const PAGE_PATHS = Object.freeze({
-  HOME: `${ROOT_PATH}/${PAGE_VALUES.HOME}`,
+  INDEX: `${ROOT_PATH}/${PAGE_VALUES.INDEX}`,
 });

@@ -4,16 +4,29 @@ pipeline {
 
     // stages to execute
     stages {
-        // building stage
-        stage('Build') {
+        // install npm packages
+        stage('Install NPM Packages') {
             steps {
-                // install dependencies
                 echo 'installing dependencies'
                 script {
                     sh 'npm install'
                 }
+            }
+        }
 
-                // create build
+        // test using jest framework
+        stage('Jest Testing') {
+            steps {
+                echo 'executing jest tests'
+                script {
+                    sh 'npm test'
+                }
+            }
+        }
+
+        // generate build
+        stage('Build') {
+            steps {
                 echo 'creating build'
                 script {
                     sh 'npm run build'
@@ -21,33 +34,12 @@ pipeline {
             }
         }
 
-        // Init AWS cli stage
-        stage('Init AWS CLI') {
+        // sync build files to aws s3 bucket
+        stage('Depoly to AWS S3') {
             steps {
                 script {
-                    // define the parameters to pass to pipeline
-                    def params = [
-                        [$class: 'StringParameterValue', name: 'DOCKERFILE_NAME', value: "${env.BRANCH_NAME}.Dockerfile"],
-                        [$class: 'StringParameterValue', name: 'DOCKERFILE_DIR', value: "${env.DOCKERFILE_DIR}"]
-                    ]
-
-                    // trigger pipeline - create docker image by dockerfile
-                    build job: env.CREATE_DOCKER_IMAGE, parameters: params
-
-                    sh 'aws --version'
+                    sh "aws s3 sync ./build ${env.DEV_S3_URL} --profile ${env.DEV_AWS_PROFILE}"
                 }
-            }
-        }
-
-        stage('AWS - User Role') {
-            steps {
-                echo 'TODO - AWS - User Role'
-            }
-        }
-
-        stage('AWS - Push to S3') {
-            steps {
-                echo 'TODO - AWS - Push to S3'
             }
         }
     }
