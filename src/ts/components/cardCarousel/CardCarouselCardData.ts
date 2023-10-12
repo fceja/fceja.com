@@ -1,15 +1,19 @@
-export const CardCarouselCardData = Object.freeze([
+interface CardDataItem {
+  imagePath: string;
+  title: string;
+  description: string;
+  urlLink: string;
+}
+
+// export const CardCarouselCardData = Object.freeze([
+export const CardCarouselCardData: ReadonlyArray<CardDataItem> = Object.freeze([
   {
-    imagePath: require("assets/bingo.png"),
+    imagePath:
+      "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/bingo.png",
     title: "Bingo Card Game",
     description:
       "Imatation of card game, where game is won by selecting a predetermined pattern.",
-    urlLink: "https://github.com/fceja/bingo_game",
-  },
-  {
-    imagePath: require("assets/orange.png"),
-    title: "Test - Orange",
-    description: "Test - Orange Description.",
-    urlLink: "http://localhost:3000",
+    urlLink: "http://dev.frontend.bingo.s3-website-us-west-1.amazonaws.com",
+    gitHubLink: "https://github.com/fceja/bingo_game",
   },
 ]);
