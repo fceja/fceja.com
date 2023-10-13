@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 
-import "styles/pages/IndexPage.scss";
+import "styles/pages/ProjectsPage.scss";
 import CardCarousel from "ts/components/cardCarousel/CardCarousel";
 
 const IndexPage = () => {

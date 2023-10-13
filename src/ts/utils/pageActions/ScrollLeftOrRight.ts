@@ -1,4 +1,4 @@
-// script that scrolls container left or right
+// script that scrolls page container left or right
 export const ScrollLeftOrRight = (scrollDirection: string, elemId: string) => {
   var containerDiv = document.getElementById(elemId) as HTMLElement;
 
