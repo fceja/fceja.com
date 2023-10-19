@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import App from "ts/components/App";
+import App from "@components/App";
 
 const Root = () => {
   return (

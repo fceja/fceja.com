@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
-import CardCarousel from "./CardCarousel";
-import { CardCarouselCardData } from "./CardCarouselCardData";
+import CardCarousel from "@components/cardCarousel/CardCarousel";
+import { CardCarouselCardData } from "@components/cardCarousel/CardCarouselCardData";
 
 // CardCarousel component tests
 describe("CardCarousel component tests", () => {

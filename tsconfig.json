@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -16,11 +16,19 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./build",
+    "paths": {
+      "@/*": ["./src"],
+      "@common/*": ["./src/ts/common/*"],
+      "@components/*": ["./src/ts/components/*"],
+      "@pages/*": ["./src/ts/pages/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@appTypes/*": ["./src/ts/types/*"],
+      "@utils/*": ["./src/ts/utils/*"]
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
     "target": "es2016"
-  },
-  "include": ["src"]
+  }
 }

@@ -1,8 +1,8 @@
+import Container from "react-bootstrap/Container";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import Container from "react-bootstrap/Container";
-import IndexPage from "ts/pages/ProjectsPage";
-import { PAGE_PATHS } from "ts/common/Constants";
+import IndexPage from "@pages/ProjectsPage";
+import { PAGE_PATHS } from "@common/Constants";
 
 const App = () => {
   return (

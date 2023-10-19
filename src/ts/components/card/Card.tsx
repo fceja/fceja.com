@@ -1,6 +1,5 @@
-import "styles/components/Card.scss";
-
-import { CardPropsType } from "ts/types/index";
+import "@styles/components/Card.scss";
+import { CardPropsType } from "@appTypes/index";
 
 const Card: React.FC<CardPropsType> = ({ cardData }) => {
   return (
