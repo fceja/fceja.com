@@ -6,7 +6,12 @@ const Card: React.FC<CardPropsType> = ({ cardData }) => {
     <>
       {cardData.map((card, index) => {
         return (
-          <div id={`card-${index}`} key={index} className="card">
+          <div
+            key={index}
+            id={`card-${index}`}
+            data-testid="card"
+            className="card"
+          >
             <a
               className=".img-link-container"
               href={card.urlLink}

@@ -17,7 +17,7 @@
     "noUnusedParameters": true,
     "outDir": "./build",
     "paths": {
-      "@/*": ["./src"],
+      "@/*": ["./src/*"],
       "@common/*": ["./src/ts/common/*"],
       "@components/*": ["./src/ts/components/*"],
       "@pages/*": ["./src/ts/pages/*"],
