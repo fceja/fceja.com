@@ -3,12 +3,14 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
+const projectRoot = "./../..";
+
 const config = {
   mode: "development",
   entry: "./src/ts/index.tsx",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, `${projectRoot}/dist`),
     publicPath: "/",
   },
   // set dev settings
