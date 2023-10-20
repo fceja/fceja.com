@@ -3,6 +3,7 @@ interface CardDataItem {
   title: string;
   description: string;
   urlLink: string;
+  gitHubLink: string;
 }
 
 export const CardCarouselCardData: ReadonlyArray<CardDataItem> = Object.freeze([

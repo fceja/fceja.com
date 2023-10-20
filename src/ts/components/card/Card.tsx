@@ -1,10 +1,11 @@
 import "@styles/components/Card.scss";
-import { CardPropsType } from "@appTypes/index";
+import { CardsPropsType } from "@appTypes/index";
+import ContactSocial from "@components/contactSocial/ContactSocial";
 
-const Card: React.FC<CardPropsType> = ({ cardData }) => {
+const Card: React.FC<CardsPropsType> = ({ cardsData }) => {
   return (
     <>
-      {cardData.map((card, index) => {
+      {cardsData.map((card, index) => {
         return (
           <div
             key={index}
@@ -30,6 +31,7 @@ const Card: React.FC<CardPropsType> = ({ cardData }) => {
             </a>
             <p className="title text-center text-wrap">{card.title}</p>
             <p className="description m-3 text-wrap">{card.description}</p>
+            <ContactSocial card={card} />
           </div>
         );
       })}

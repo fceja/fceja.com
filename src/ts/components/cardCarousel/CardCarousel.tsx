@@ -19,7 +19,7 @@ const CardCarousel: React.FC = () => {
         onClick={() => ScrollLeftOrRight("left", "cards-container")}
       />
       <Container id="cards-container" className="d-flex align-items-center">
-        <Card cardData={CardCarouselCardData} />
+        <Card cardsData={CardCarouselCardData} />
       </Container>
       <MdChevronRight
         className="icon-right"

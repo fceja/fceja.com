@@ -1,12 +1,18 @@
-// define CardType
+// CardType
 export type CardType = {
   imagePath: string;
   title: string;
   description: string;
   urlLink: string;
+  gitHubLink: string;
 };
 
-// Card component
-export type CardPropsType = {
-  cardData: readonly CardType[];
+// CardPropsType
+export type CardsPropsType = {
+  cardsData: readonly CardType[];
+};
+
+// ContactSocialPropsType
+export type ContactSocialPropsType = {
+  card: CardType;
 };
