@@ -6,7 +6,7 @@ interface CardDataItem {
   gitHubLink: string;
 }
 
-export const CardCarouselCardData: ReadonlyArray<CardDataItem> = Object.freeze([
+export const CardsData: ReadonlyArray<CardDataItem> = Object.freeze([
   {
     imagePath:
       "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/bingo.png",

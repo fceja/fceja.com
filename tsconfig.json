@@ -20,6 +20,7 @@
       "@/*": ["./src/*"],
       "@common/*": ["./src/ts/common/*"],
       "@components/*": ["./src/ts/components/*"],
+      "@data/*": ["./src/ts/data/*"],
       "@pages/*": ["./src/ts/pages/*"],
       "@styles/*": ["./src/styles/*"],
       "@appTypes/*": ["./src/ts/types/*"],
