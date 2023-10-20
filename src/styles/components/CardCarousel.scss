@@ -1,4 +1,9 @@
+.card-carousel-container {
+  height: 40vh;
+}
+
 #cards-container {
+  height: 100%;
   white-space: nowrap;
   overflow-x: scroll;
   scroll-behavior: smooth;

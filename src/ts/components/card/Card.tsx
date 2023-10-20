@@ -29,8 +29,10 @@ const Card: React.FC<CardsPropsType> = ({ cardsData }) => {
                 }}
               ></div>
             </a>
-            <p className="title text-center text-wrap">{card.title}</p>
-            <p className="description m-3 text-wrap">{card.description}</p>
+            <div>
+              <p className="title text-center text-wrap">{card.title}</p>
+              <p className="description m-3 text-wrap">{card.description}</p>
+            </div>
             <ContactSocial card={card} />
           </div>
         );
