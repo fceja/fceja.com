@@ -1,0 +1,23 @@
+p.description {
+  font-size: 12px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+p.title {
+  font-weight: 500;
+}
+
+ul.list-container {
+  list-style-type: square;
+  font-size: 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul.sub-list {
+  list-style-type: circle;
+  padding-left: 25px;
+}

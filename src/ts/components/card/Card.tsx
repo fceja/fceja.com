@@ -1,10 +1,12 @@
 import "@styles/components/Card.scss";
 import { CardsPropsType } from "@appTypes/index";
 import ContactSocial from "@components/contactSocial/ContactSocial";
+import CardDetails from "@/ts/components/cardDetails/CardDetails";
 
 const Card: React.FC<CardsPropsType> = ({ cardsData }) => {
   return (
     <>
+      {/* iterate through each card */}
       {cardsData.map((card, index) => {
         return (
           <div
@@ -29,10 +31,7 @@ const Card: React.FC<CardsPropsType> = ({ cardsData }) => {
                 }}
               ></div>
             </a>
-            <div>
-              <p className="title text-center text-wrap">{card.title}</p>
-              <p className="description m-3 text-wrap">{card.description}</p>
-            </div>
+            <CardDetails cardDetails={card.cardDetails} />
             <ContactSocial card={card} />
           </div>
         );

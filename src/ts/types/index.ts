@@ -1,10 +1,18 @@
 // CardType
 export type CardType = {
   imagePath: string;
-  title: string;
-  description: string;
   urlLink: string;
   gitHubLink: string;
+  cardDetails: CardDetailsType;
+};
+
+export type CardDetailsType = {
+  title: string;
+  description: string;
+};
+
+export type CardDetailPropsType = {
+  cardDetails: CardDetailsType;
 };
 
 // CardPropsType
