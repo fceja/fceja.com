@@ -1,15 +1,13 @@
 import "@styles/components/CardDetails.scss";
-import { CardDetailPropsType } from "@appTypes/index";
+import { CardDetailsPropsType } from "@appTypes/index";
 
-const CardDetails: React.FC<CardDetailPropsType> = (cardDetails) => {
+const CardDetails: React.FC<{
+  cardDetailsText: CardDetailsPropsType["cardDetailsText"];
+}> = ({ cardDetailsText }) => {
   return (
     <div>
-      <p className="title text-center text-wrap">
-        {cardDetails.cardDetails.title}
-      </p>
-      <p className="description text-wrap">
-        {cardDetails.cardDetails.description}
-      </p>
+      <p className="title text-center text-wrap">{cardDetailsText.title}</p>
+      <p className="description text-wrap">{cardDetailsText.description}</p>
       <ul className="list-container">
         <li>
           <strong>Technologies</strong>

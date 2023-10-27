@@ -31,7 +31,7 @@ const Card: React.FC<CardsPropsType> = ({ cardsData }) => {
                 }}
               ></div>
             </a>
-            <CardDetails cardDetails={card.cardDetails} />
+            <CardDetails cardDetailsText={card.cardDetailsText} />
             <ContactSocial card={card} />
           </div>
         );

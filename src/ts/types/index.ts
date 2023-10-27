@@ -1,20 +1,4 @@
-// CardType
-export type CardType = {
-  imagePath: string;
-  urlLink: string;
-  gitHubLink: string;
-  cardDetails: CardDetailsType;
-};
-
-export type CardDetailsType = {
-  title: string;
-  description: string;
-};
-
-export type CardDetailPropsType = {
-  cardDetails: CardDetailsType;
-};
-
+// components props types
 // CardPropsType
 export type CardsPropsType = {
   cardsData: readonly CardType[];
@@ -23,4 +7,24 @@ export type CardsPropsType = {
 // ContactSocialPropsType
 export type ContactSocialPropsType = {
   card: CardType;
+};
+
+// CardDetailsPropsType
+export type CardDetailsPropsType = {
+  cardDetailsText: CardDetailsTextType;
+};
+
+// types
+// CardType
+export type CardType = {
+  imagePath: string;
+  urlLink: string;
+  gitHubLink: string;
+  cardDetailsText: CardDetailsTextType;
+};
+
+// CardInfoType
+export type CardDetailsTextType = {
+  title: string;
+  description: string;
 };
