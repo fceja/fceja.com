@@ -1,30 +1,28 @@
-// components props types
-// CardPropsType
+// CardsPropsType
 export type CardsPropsType = {
-  cardsData: readonly CardType[];
+  cardsData: readonly CardPropsType[];
+};
+
+// CardPropsType
+export type CardPropsType = {
+  imagePath: string;
+  urlLink: string;
+  gitHubLink: string;
+  cardDetails: CardDetailsType;
+};
+
+type CardDetailsType = {
+  title: string;
+  description: string;
+  listDescription: ListDescriptionType[];
+};
+
+type ListDescriptionType = {
+  title: string;
+  listItems: string[];
 };
 
 // ContactSocialPropsType
 export type ContactSocialPropsType = {
-  card: CardType;
-};
-
-// CardDetailsPropsType
-export type CardDetailsPropsType = {
-  cardDetailsText: CardDetailsTextType;
-};
-
-// types
-// CardType
-export type CardType = {
-  imagePath: string;
-  urlLink: string;
-  gitHubLink: string;
-  cardDetailsText: CardDetailsTextType;
-};
-
-// CardInfoType
-export type CardDetailsTextType = {
-  title: string;
-  description: string;
+  card: CardPropsType;
 };
