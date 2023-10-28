@@ -15,10 +15,10 @@ export type CardPropsType = {
 export type CardDetailsPropsType = {
   title: string;
   description: string;
-  listDescription: ListDescriptionType[];
+  listSections: ListSectionType[];
 };
 
-type ListDescriptionType = {
+type ListSectionType = {
   title: string;
   listItems: string[];
 };

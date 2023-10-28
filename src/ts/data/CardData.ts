@@ -6,7 +6,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       title: "Bingo Card Game",
       description:
         "Imitation of card game, where the game is won when a predetermined pattern is selected.",
-      listDescription: [
+      listSections: [
         {
           title: "Technologies",
           listItems: ["JavaScript", "HTML", "CSS"],
