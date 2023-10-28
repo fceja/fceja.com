@@ -18,14 +18,15 @@ const CardDetails: React.FC<CardDetailsPropsType> = (cardDetailsProps) => {
 
   const generateListComponent = () => {
     return (
-      <li>
+      <>
+        {/* generates list sections */}
         {cardDetailsProps.listSections.map((section, index) => (
-          <div key={index}>
-            <strong>{section.title}</strong>
+          <li>
+            <strong key={`title-${index}`}>{section.title}</strong>
             {generateListItems(section.listItems)}
-          </div>
+          </li>
         ))}
-      </li>
+      </>
     );
   };
 
