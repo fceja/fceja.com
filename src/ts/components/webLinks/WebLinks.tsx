@@ -1,4 +1,4 @@
-import "@styles/components/ContactSocial.scss";
+import "@styles/components/WebLinks.scss";
 import { WebLinksPropsType } from "@appTypes/index";
 
 const WebLinks: React.FC<WebLinksPropsType> = (webLinksprops) => {
