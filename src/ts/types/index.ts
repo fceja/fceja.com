@@ -1,17 +1,18 @@
-// CardsPropsType
-export type CardsPropsType = {
-  cardsData: readonly CardPropsType[];
+export type CardDataType = readonly CardPropsType[];
+export type WebLinksPropsType = WebLinksType;
+
+export type CardDataArrayProps = {
+  cardDataArray: readonly CardPropsType[];
 };
 
-// CardPropsType
 export type CardPropsType = {
+  cardDetails: CardDetailsPropsType;
   imagePath: string;
-  urlLink: string;
-  gitHubLink: string;
-  cardDetails: CardDetailsType;
+  index: number | null;
+  webLinks: WebLinksType;
 };
 
-type CardDetailsType = {
+export type CardDetailsPropsType = {
   title: string;
   description: string;
   listDescription: ListDescriptionType[];
@@ -22,7 +23,7 @@ type ListDescriptionType = {
   listItems: string[];
 };
 
-// ContactSocialPropsType
-export type ContactSocialPropsType = {
-  card: CardPropsType;
+type WebLinksType = {
+  urlLink: string;
+  gitHubLink: string;
 };
