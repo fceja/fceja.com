@@ -3,7 +3,7 @@ export type CardImagePropsType = WebLinksType;
 export type WebLinksPropsType = WebLinksType;
 
 export type CardDataArrayProps = {
-  cardDataArray: readonly CardPropsType[];
+  cardsData: readonly CardPropsType[];
 };
 
 export type CardPropsType = {

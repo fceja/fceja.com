@@ -1,8 +1,8 @@
 import "@styles/components/Card.scss";
-import CardDetails from "@/ts/components/cardDetails/CardDetails";
+import CardDetails from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
 import { CardPropsType } from "@appTypes/index";
-import WebLinks from "@/ts/components/webLinks/WebLinks";
+import WebLinks from "@components/webLinks/WebLinks";
 
 const Card: React.FC<CardPropsType> = (cardProps) => {
   return (
