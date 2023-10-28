@@ -1,4 +1,5 @@
 export type CardDataType = readonly CardPropsType[];
+export type CardImagePropsType = WebLinksType;
 export type WebLinksPropsType = WebLinksType;
 
 export type CardDataArrayProps = {
@@ -7,7 +8,6 @@ export type CardDataArrayProps = {
 
 export type CardPropsType = {
   cardDetails: CardDetailsPropsType;
-  imagePath: string;
   index: number | null;
   webLinks: WebLinksType;
 };
@@ -24,6 +24,7 @@ type ListDescriptionType = {
 };
 
 type WebLinksType = {
-  urlLink: string;
   gitHubLink: string;
+  imageUrl: string;
+  urlLink: string;
 };

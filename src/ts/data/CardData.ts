@@ -13,12 +13,12 @@ export const CardData: Readonly<CardDataType> = Object.freeze([
         },
       ],
     },
-    imagePath:
-      "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/bingo.png",
     index: null,
     webLinks: {
-      urlLink: "http://dev.frontend.bingo.s3-website-us-west-1.amazonaws.com",
       gitHubLink: "https://github.com/fceja/bingo_game",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/bingo.png",
+      urlLink: "http://dev.frontend.bingo.s3-website-us-west-1.amazonaws.com",
     },
   },
 ]);
