@@ -22,7 +22,9 @@ const CardDetails: React.FC<CardDetailsPropsType> = (cardDetailsProps) => {
         {/* generates list sections */}
         {cardDetailsProps.listSections.map((section, index) => (
           <li key={index}>
-            <strong key={`title-${index}`}>{section.title}</strong>
+            <strong key={`title-${index}`} className="list-sec-title">
+              {section.title}
+            </strong>
             {generateListItems(section.listItems)}
           </li>
         ))}

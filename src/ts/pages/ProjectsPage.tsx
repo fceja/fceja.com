@@ -10,7 +10,13 @@ const IndexPage = () => {
         className="intro p-2 m-0 w-100 text-center text-wrap d-flex justify-content-center align-items-center"
         id="greeting-text"
       >
-        Greetings, FC projects down below.
+        <span>
+          Greetings,{" "}
+          <em>
+            <strong>fceja</strong>
+          </em>{" "}
+          projects down below.
+        </span>
       </p>
       <CardCarousel />
     </Container>

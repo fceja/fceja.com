@@ -12,7 +12,14 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Frameworks / Libraries / Modules",
-          listItems: ["Postgres", "React", "Axios", "Webpack", "Google Maps"],
+          listItems: [
+            "Postgres",
+            "React",
+            "Axios",
+            "Bootstrap",
+            "Webpack",
+            "Google Maps",
+          ],
         },
         {
           title: "Cloud - AWS",

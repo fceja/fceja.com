@@ -1,10 +1,6 @@
-.card-carousel-container {
-  min-height: 45vh;
-}
-
 #cards-container {
   height: 100%;
-  white-space: nowrap;
+  width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
 
