@@ -38,6 +38,35 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
+      title: "Geolocation/Ip - Login",
+      description:
+        "After logging in, clicking the 'Get My Location' button will retreive users\
+        geo-coordinates and IP info (requests user permission).",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["TypeScript", "HTML", "SCSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["Postgres", "React", "Axios", "Bootstrap", "Webpack"],
+        },
+        {
+          title: "Cloud - AWS",
+          listItems: ["S3", "API Gateway", "Lambda", "RDS"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/login_form_geolocation_ip",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/geolocation_ip.png",
+      urlLink: "https://fceja-proj.com/",
+    },
+  },
+  {
+    cardDetails: {
       title: "Bingo Card Game",
       description:
         "Imitation of card game, where the game is won when a predetermined pattern is selected.",
