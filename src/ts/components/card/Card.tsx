@@ -6,7 +6,11 @@ import WebLinks from "@components/webLinks/WebLinks";
 
 const Card: React.FC<CardPropsType> = (cardProps) => {
   return (
-    <div id={`card-${cardProps.index}`} data-testid="card" className="card">
+    <div
+      id={`card-${cardProps.index}`}
+      data-testid="card"
+      className="card ms-2 me-3"
+    >
       <CardImage {...cardProps.webLinks} />
       <CardDetails {...cardProps.cardDetails} />
       <WebLinks {...cardProps.webLinks} />

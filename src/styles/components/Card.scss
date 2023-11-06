@@ -9,8 +9,6 @@ div.card {
   max-width: 350px;
   box-shadow: 10px 15px 5px 5px #e6e3e3;
   background-color: #f8f8f8;
-  margin-left: 10px;
-  margin-right: 10px;
 
   @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
     min-width: 95%;
