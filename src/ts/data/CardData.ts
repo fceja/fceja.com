@@ -19,6 +19,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
             "Bootstrap",
             "Webpack",
             "Google Maps",
+            "NPM (Node Package Manager)",
           ],
         },
         {
@@ -38,6 +39,42 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
+      title: "User Forum",
+      description:
+        "A Forum like app, featuring both standadard and moderator users. Users have ability to:\
+         create an account, log in, create posts, and view community posts on homepage.\
+         Moderators can do the same, as well as ban users or delete posts.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["Python", "HTML", "CSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: [
+            "Postgres",
+            "Django",
+            "Django Crispy Forms",
+            "Bootstrap",
+            "PIP (Pip Installs Packages)",
+          ],
+        },
+        {
+          title: "Cloud - Heroku",
+          listItems: ["Heroku Postgres", "todo"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/user_post",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/user_post.png",
+      urlLink: "http://todo.com/",
+    },
+  },
+  {
+    cardDetails: {
       title: "Geolocation/Ip - Login",
       description:
         "After logging in, clicking the 'Get My Location' button will retreive users\
@@ -49,7 +86,14 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Frameworks / Libraries / Modules",
-          listItems: ["Postgres", "React", "Axios", "Bootstrap", "Webpack"],
+          listItems: [
+            "Postgres",
+            "React",
+            "Axios",
+            "Bootstrap",
+            "Webpack",
+            "NPM (Node Package Manager)",
+          ],
         },
         {
           title: "Cloud - AWS",
