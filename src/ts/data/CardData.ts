@@ -3,7 +3,7 @@ import { CardDataType } from "@appTypes/index";
 export const CardsData: Readonly<CardDataType> = Object.freeze([
   {
     cardDetails: {
-      title: "Google Map - Login",
+      title: "Google Map",
       description: "After logging in, an interactive Google Map is populated",
       listSections: [
         {
@@ -19,7 +19,6 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
             "Bootstrap",
             "Webpack",
             "Google Maps",
-            "NPM (Node Package Manager)",
           ],
         },
         {
@@ -41,7 +40,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     cardDetails: {
       title: "User Forum",
       description:
-        "A Forum like app, featuring both standadard and moderator users. Users have ability to:\
+        "A Forum like app, featuring both standard and moderator users. Users have ability to:\
          create an account, log in, create posts, and view community posts on homepage.\
          Moderators can do the same, as well as ban users or delete posts.",
       listSections: [
@@ -51,17 +50,11 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Frameworks / Libraries / Modules",
-          listItems: [
-            "Postgres",
-            "Django",
-            "Django Crispy Forms",
-            "Bootstrap",
-            "PIP (Pip Installs Packages)",
-          ],
+          listItems: ["Postgres", "Django", "Django Crispy Forms", "Bootstrap"],
         },
         {
           title: "Cloud - Heroku",
-          listItems: ["Heroku Postgres", "todo"],
+          listItems: ["Heroku Postgres", "todo - Instance"],
         },
       ],
     },
@@ -70,12 +63,46 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       gitHubLink: "https://github.com/fceja/user_post",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/user_post.png",
-      urlLink: "http://todo.com/",
+      urlLink: null,
     },
   },
   {
     cardDetails: {
-      title: "Geolocation/Ip - Login",
+      title: "Profile",
+      description:
+        "A web app that can be used for a user/company profile.\
+         Features a home, gallery, and contact page.\
+         Contact form pings the emailer api, where an email is generated and sent to the page owner.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["TypeScript", "HTML", "SCSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["React", "Axios", "Bootstrap", "Redux"],
+        },
+        {
+          title: "Cloud - AWS",
+          listItems: ["S3"],
+        },
+        {
+          title: "Miscellaneous",
+          listItems: ["Responsive", "Evolving project"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/profile_app",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/profile.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
+      title: "Geolocation & IP",
       description:
         "After logging in, clicking the 'Get My Location' button will retreive users\
         geo-coordinates and IP info (requests user permission).",
@@ -90,9 +117,9 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
             "Postgres",
             "React",
             "Axios",
-            "Bootstrap",
+            "Bootstrap / React Bootstrap",
             "Webpack",
-            "NPM (Node Package Manager)",
+            "Google Maps",
           ],
         },
         {
@@ -107,6 +134,29 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/geolocation_ip.png",
       urlLink: "https://fceja-proj.com/",
+    },
+  },
+  {
+    cardDetails: {
+      title: "Dice Game",
+      description: "A poker style game with Dice.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["Java"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["JavaFX", "Maven"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/dice_game",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/dice_game.png",
+      urlLink: null,
     },
   },
   {
