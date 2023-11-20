@@ -7,14 +7,14 @@ const IndexPage = () => {
   return (
     <Container fluid className="index-page p-0">
       <p
-        className="intro p-2 m-0 w-100 text-center text-wrap d-flex justify-content-center align-items-center"
+        className="intro d-flex align-items-center justify-content-center"
         id="greeting-text"
       >
         <span>
-          Greetings,{" "}
+          Greetings,
           <em>
             <strong>fceja</strong>
-          </em>{" "}
+          </em>
           projects down below.
         </span>
       </p>

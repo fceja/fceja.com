@@ -1,8 +1,16 @@
+.card-carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #cards-container {
-  height: 100%;
   width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 
   &::-webkit-scrollbar {
     display: none;
