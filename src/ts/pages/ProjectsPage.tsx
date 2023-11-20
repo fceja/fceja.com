@@ -13,7 +13,7 @@ const IndexPage = () => {
         <span>
           Greetings,
           <em>
-            <strong>fceja</strong>
+            <strong> fceja </strong>
           </em>
           projects down below.
         </span>

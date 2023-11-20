@@ -1,20 +1,15 @@
 .card-carousel-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#cards-container {
-  width: 100%;
+.cards-container {
+  width: 100vw;
   overflow-x: scroll;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 [class*="icon"] {

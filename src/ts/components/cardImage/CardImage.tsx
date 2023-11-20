@@ -1,9 +1,10 @@
+import "@styles/components/cardImage.scss";
 import { CardImagePropsType } from "@appTypes/index";
 
 const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
   const backgroundImageDiv = (
     <div
-      className="img m-1"
+      className="img m-1 "
       style={{
         backgroundImage: `url(${cardImageProps.imageUrl})`,
         backgroundSize: "contain",

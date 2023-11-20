@@ -1,9 +1,5 @@
 @import "src/styles/Variables";
 
-.img-link-container {
-  cursor: pointer;
-}
-
 div.card {
   min-width: 350px;
   max-width: 350px;
@@ -18,9 +14,4 @@ div.card {
     min-width: min(350px, 95%);
     max-width: 350px;
   }
-}
-
-div.img {
-  height: 130px;
-  max-height: 130px;
 }
