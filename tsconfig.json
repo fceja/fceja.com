@@ -15,9 +15,8 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./build",
+    "outDir": "./dist",
     "paths": {
-      "@/*": ["./src/*"],
       "@common/*": ["./src/ts/common/*"],
       "@components/*": ["./src/ts/components/*"],
       "@data/*": ["./src/ts/data/*"],
