@@ -1,6 +1,40 @@
 import { CardDataType } from "@appTypes/index";
 
 export const CardsData: Readonly<CardDataType> = Object.freeze([
+  // TODO - add an automation proj
+  // TODO - add fceja.com automation
+  {
+    cardDetails: {
+      title: "fceja.com",
+      description: "View the code repository for this webpage.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["TypeScript", "HTML", "SCSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["React", "Axios", "Bootstrap", "Webpack"],
+        },
+        {
+          title: "Cloud - AWS",
+          listItems: ["S3", "CloudFront", "Route53"],
+        },
+        {
+          title: "Miscellaneous",
+          listItems: ["CI/CD: Jenkins"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/google_maps_app",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/google_maps.png",
+      urlLink:
+        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
+    },
+  },
   {
     cardDetails: {
       title: "Google Map",
@@ -68,11 +102,43 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
+      title: "Emailer API",
+      description:
+        "An Express Server API that provides an endpoint for email generation.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["TypeScript"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["Expess JS", "Nodemailer", "Node JS"],
+        },
+        {
+          title: "Cloud - AWS",
+          listItems: ["API Gateway", "Lambda"],
+        },
+        {
+          title: "Miscellaneous",
+          listItems: ["RestFul", "API key required", "CORS enabled"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/emailer_api",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/nodeJs_api.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
       title: "Profile",
       description:
         "A web app that can be used for a user/company profile.\
          Features a home, gallery, and contact page.\
-         Contact form pings the emailer api, where an email is generated and sent to the page owner.",
+         Contact form pings the Emailer API, where an email is generated and sent to the page owner.",
       listSections: [
         {
           title: "Technologies",
@@ -124,7 +190,14 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Cloud - AWS",
-          listItems: ["S3", "API Gateway", "Lambda", "RDS"],
+          listItems: [
+            "S3",
+            "API Gateway",
+            "Lambda",
+            "RDS",
+            "CloudFront",
+            "Route53",
+          ],
         },
       ],
     },
@@ -134,6 +207,33 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/geolocation_ip.png",
       urlLink: "https://fceja-proj.com/",
+    },
+  },
+  {
+    cardDetails: {
+      title: "Login JWT Auth API",
+      description: "Todo.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["TypeScript"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["Postgres", "Node JS", "Express JS", "JSON Web Token"],
+        },
+        {
+          title: "Miscellaneous",
+          listItems: ["CORS enabled", "Bcrypt", "Session"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/login_auth_jwt_session_api",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/nodeJs_api.png",
+      urlLink: null,
     },
   },
   {
@@ -161,6 +261,72 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
+      title: "Login JWT Auth API",
+      description:
+        "An API that creates, retrieves, and logs-in users using JWT authentication.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["GO"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["Postgres"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/jwt_auth_api",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/go.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
+      title: "Card Slider",
+      description: "Todo.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["JavaScript", "HTML", "CSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["React"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/card_slider",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/card_slider.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
+      title: "4-in-a-row vs A.I. Agent",
+      description: "Todo.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["C++"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/ai_agent_4_in_a_row",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/ai_agent_4_in_a_row.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
       title: "Bingo Card Game",
       description:
         "Imitation of card game, where the game is won when a predetermined pattern is selected.",
@@ -181,6 +347,29 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/bingo.png",
       urlLink: "http://dev.frontend.bingo.s3-website-us-west-1.amazonaws.com",
+    },
+  },
+  {
+    cardDetails: {
+      title: "Chipotle Mock",
+      description: "Mock webpage of Chipotle.",
+      listSections: [
+        {
+          title: "Technologies",
+          listItems: ["JavaScript", "HTML", "CSS"],
+        },
+        {
+          title: "Frameworks / Libraries / Modules",
+          listItems: ["JQuery"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/chipotle_mock",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/chipotle_mock.png",
+      urlLink: null,
     },
   },
 ]);
