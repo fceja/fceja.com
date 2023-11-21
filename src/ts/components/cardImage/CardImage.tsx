@@ -14,9 +14,14 @@ const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
     ></div>
   );
 
-  return (
+  return !cardImageProps.imageUrl ? (
+    // imageUrl is null, return empty div with formatting
+    <div className="pt-3"></div>
+  ) : (
+    // imageUrl exists
     <div className="img-link-container">
       {cardImageProps.urlLink ? (
+        // urlLink exists
         <a
           className="link-container"
           href={cardImageProps.urlLink}
@@ -26,6 +31,7 @@ const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
           {backgroundImageDiv}
         </a>
       ) : (
+        // urlLink dne, return background image only
         backgroundImageDiv
       )}
     </div>

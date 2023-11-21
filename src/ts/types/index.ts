@@ -25,6 +25,6 @@ type ListSectionType = {
 
 type WebLinksType = {
   gitHubLink: string;
-  imageUrl: string;
+  imageUrl: string | null;
   urlLink: string | null;
 };

@@ -33,8 +33,8 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     },
     index: null,
     webLinks: {
-      gitHubLink: "https://github.com/fceja/google_maps_app",
-      imageUrl: "null",
+      gitHubLink: "https://github.com/fceja/fceja",
+      imageUrl: null,
       urlLink: "https://fceja.com",
     },
   },
@@ -51,21 +51,14 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
           title: "Automation / Test Framework",
           listItems: ["Selenium Webdriver", "Jest"],
         },
-        {
-          title: "Miscellaneous",
-          listItems: [
-            "Setup also includes tests for: https://www.selenium.dev/documentation/",
-          ],
-        },
       ],
     },
     index: null,
     webLinks: {
-      gitHubLink: "https://github.com/fceja/google_maps_app",
+      gitHubLink: "https://github.com/fceja/fceja_automation",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/automation.png",
-      urlLink:
-        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
+      urlLink: null,
     },
   },
   {
@@ -76,6 +69,10 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         create an account, log in, create posts, and view community posts on the homepage.\
         Moderators can do the same, as well as ban users or delete posts.",
       listSections: [
+        {
+          title: "Demo Creds",
+          listItems: ["Username: mary", "Pass: LetMeIn2023$!%"],
+        },
         {
           title: "Frontend",
           listItems: [
@@ -93,7 +90,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Cloud - Heroku",
-          listItems: ["Heroku", "todo - Instance"],
+          listItems: ["Heroku Postgres", "Heroku Dyno"],
         },
       ],
     },
@@ -102,7 +99,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       gitHubLink: "https://github.com/fceja/user_post",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/user_post.png",
-      urlLink: null,
+      urlLink: "https://django-user-post-a42f5d79d28f.herokuapp.com",
     },
   },
   {
@@ -168,16 +165,21 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       gitHubLink: "https://github.com/fceja/profile_app",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/profile.png",
-      urlLink: null,
+      urlLink:
+        "http://dev.client.profile-app.s3-website-us-west-1.amazonaws.com",
     },
   },
   {
     cardDetails: {
-      title: "Geolocation & IP",
+      title: "Geolocation & IP App",
       description:
         "After logging in, clicking the 'Get My Location' button will retreive users\
       geo-coordinates and IP info (requests user permission).",
       listSections: [
+        {
+          title: "Demo Creds",
+          listItems: ["Email: fc-geoip@email.com", "Pass: letMeIn_geoip!"],
+        },
         {
           title: "Frontend",
           listItems: [
@@ -266,18 +268,21 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     },
     index: null,
     webLinks: {
-      gitHubLink: "https://github.com/fceja/google_maps_app",
+      gitHubLink: "https://github.com/fceja/econ_calendar_automation",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/automation.png",
-      urlLink:
-        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
+      urlLink: null,
     },
   },
   {
     cardDetails: {
-      title: "Google Map App",
+      title: "Google Maps App",
       description: "After logging in, an interactive Google Map is populated.",
       listSections: [
+        {
+          title: "Demo Creds",
+          listItems: ["Email: fc-gmaps@email.com", "Pass: letMeIn_gmaps!"],
+        },
         {
           title: "Frontend",
           listItems: [
@@ -315,7 +320,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
-      title: "Card Slider",
+      title: "Card Slider App",
       description: "A container featuring scrollable cards.",
       listSections: [
         {
