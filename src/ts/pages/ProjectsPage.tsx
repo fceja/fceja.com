@@ -1,17 +1,25 @@
 import Container from "react-bootstrap/Container";
 
-import "styles/pages/ProjectsPage.scss";
-import CardCarousel from "ts/components/cardCarousel/CardCarousel";
+import "@styles/pages/ProjectsPage.scss";
+import CardCarousel from "@components/cardCarousel/CardCarousel";
+import SocialLinks from "@components/socialLinks/SocialLinks";
 
 const IndexPage = () => {
   return (
-    <Container fluid className="index-page p-0">
+    <Container fluid className="index-page">
       <p
-        className="intro p-2 m-0 w-100 text-center text-wrap d-flex justify-content-center align-items-center"
+        className="intro d-flex align-items-center justify-content-center m-0"
         id="greeting-text"
       >
-        Greetings, FC projects down below.
+        <span>
+          Greetings,
+          <em>
+            <strong> fceja </strong>
+          </em>
+          projects down below.
+        </span>
       </p>
+      <SocialLinks />
       <CardCarousel />
     </Container>
   );

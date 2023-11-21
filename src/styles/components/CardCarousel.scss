@@ -1,15 +1,29 @@
-#cards-container {
-  white-space: nowrap;
+@import "../Variables.scss";
+
+.card-carousel-container {
+  width: 95%;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-container {
+  width: 100vw;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  align-items: flex-center;
 
-  &::-webkit-scrollbar {
-    display: none;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
+    align-items: flex-start;
   }
 }
 
 [class*="icon"] {
   height: 100px;
   width: 50px;
-  color: gray;
+  color: $chevrons-gray;
 }

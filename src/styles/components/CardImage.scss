@@ -1,0 +1,17 @@
+div.img-link-container {
+  height: 130px;
+  padding: 15px;
+}
+
+a {
+  cursor: pointer;
+
+  &.link-container {
+    display: block;
+    height: 100%;
+  }
+}
+
+div.img-div {
+  height: 100%;
+}

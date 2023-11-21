@@ -1,35 +1,20 @@
-import "styles/components/Card.scss";
+import "@styles/components/Card.scss";
+import CardDetails from "@components/cardDetails/CardDetails";
+import CardImage from "@components/cardImage/CardImage";
+import { CardPropsType } from "@appTypes/index";
+import WebLinks from "@components/webLinks/WebLinks";
 
-import { CardPropsType } from "ts/types/index";
-
-const Card: React.FC<CardPropsType> = ({ cardData }) => {
+const Card: React.FC<CardPropsType> = (cardProps) => {
   return (
-    <>
-      {cardData.map((card, index) => {
-        return (
-          <div id={`card-${index}`} key={index} className="card">
-            <a
-              className=".img-link-container"
-              href={card.urlLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div
-                className="img m-1"
-                style={{
-                  backgroundImage: `url(${card.imagePath})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                }}
-              ></div>
-            </a>
-            <p className="title text-center text-wrap">{card.title}</p>
-            <p className="description m-3 text-wrap">{card.description}</p>
-          </div>
-        );
-      })}
-    </>
+    <div
+      id={`card-${cardProps.index}`}
+      data-testid="card"
+      className="card ms-2 me-3"
+    >
+      <CardImage {...cardProps.webLinks} />
+      <CardDetails {...cardProps.cardDetails} />
+      <WebLinks {...cardProps.webLinks} />
+    </div>
   );
 };
 

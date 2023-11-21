@@ -1,58 +1,17 @@
-@import "styles/Variables";
+@import "src/styles/Variables";
 
-@media (min-width: $breakpoint-zero) and (max-width: calc($breakpoint-xs + 20px)) {
-  .card {
-    background-color: #f8f0fb;
-    box-shadow: 10px 15px 5px 5px #e6e3e3;
-    display: inline-block;
-    margin-left: 15px;
-    margin-right: 15px;
-    max-width: 19vh;
-    min-width: 19vh;
-    min-height: 300px;
+div.card {
+  min-width: 350px;
+  max-width: 350px;
+  box-shadow: 10px 15px 5px 5px #e6e3e3;
+  background-color: #f8f8f8;
+
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
+    min-width: 95%;
+    max-width: 95%;
   }
-}
-@media (min-width: calc($breakpoint-xs + 20px)) {
-  .card {
-    background-color: #f8f0fb;
-    box-shadow: 10px 15px 5px 5px #e6e3e3;
-    display: inline-block;
-    max-width: 22vh;
-    margin-left: 15px;
-    margin-right: 15px;
-    min-width: 22vh;
-    min-height: 300px;
+  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    min-width: min(350px, 95%);
+    max-width: 350px;
   }
-}
-@media (min-width: calc($breakpoint-xs + 92px)) {
-  .card {
-    background-color: #f8f0fb;
-    box-shadow: 10px 15px 5px 5px #e6e3e3;
-    display: inline-block;
-    margin-left: 15px;
-    margin-right: 15px;
-    min-width: 30vh;
-    max-width: 30vh;
-    min-height: 300px;
-  }
-}
-
-.img-link-container {
-  cursor: pointer;
-  height: 200px;
-}
-
-div.img {
-  border-radius: 3px;
-  box-sizing: border-box;
-  height: 130px;
-  width: 95%;
-}
-
-.title {
-  font-weight: 500;
-}
-
-.description {
-  font-size: 12px;
 }
