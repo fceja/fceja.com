@@ -1,4 +1,3 @@
-// import Container from "react-bootstrap/Container";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Stack from "react-bootstrap/Stack";
 

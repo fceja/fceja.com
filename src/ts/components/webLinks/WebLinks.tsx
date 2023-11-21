@@ -1,3 +1,4 @@
+import "@styles/components/WebLinks.scss";
 import { WebLinksPropsType } from "@appTypes/index";
 
 const WebLinks: React.FC<WebLinksPropsType> = (webLinksprops) => {
@@ -6,7 +7,11 @@ const WebLinks: React.FC<WebLinksPropsType> = (webLinksprops) => {
       {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.  */}
       <div className="contact-info-social-items d-flex justify-content-center mt-3 mb-3">
         {webLinksprops.urlLink && (
-          <a href={webLinksprops.urlLink} target="_blank" className="ms-2 me-2">
+          <a
+            href={webLinksprops.urlLink}
+            target="_blank"
+            className="url-link ms-2 me-2"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1.75em"
@@ -21,7 +26,7 @@ const WebLinks: React.FC<WebLinksPropsType> = (webLinksprops) => {
           <a
             href={webLinksprops.gitHubLink}
             target="_blank"
-            className="ms-2 me-2"
+            className="github-link ms-2 me-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
