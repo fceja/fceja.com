@@ -18,7 +18,7 @@ const CardCarousel: React.FC = () => {
         onClick={() => ScrollLeftOrRight("left", "cards-container")}
       />
       <div
-        className="cards-container d-flex align-items-center pt-4 pb-4"
+        className="cards-container"
         id="cards-container"
       >
         <Cards cardsData={CardsData}></Cards>
