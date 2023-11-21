@@ -1,10 +1,10 @@
-import "@styles/components/cardImage.scss";
+import "@styles/components/CardImage.scss";
 import { CardImagePropsType } from "@appTypes/index";
 
 const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
   const backgroundImageDiv = (
     <div
-      className="img m-1 "
+      className="img-div"
       style={{
         backgroundImage: `url(${cardImageProps.imageUrl})`,
         backgroundSize: "contain",
@@ -15,10 +15,10 @@ const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
   );
 
   return (
-    <>
+    <div className="img-link-container">
       {cardImageProps.urlLink ? (
         <a
-          className=".img-link-container"
+          className="link-container"
           href={cardImageProps.urlLink}
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
       ) : (
         backgroundImageDiv
       )}
-    </>
+    </div>
   );
 };
 

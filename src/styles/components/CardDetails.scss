@@ -1,17 +1,16 @@
+p.title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
 p.description {
-  font-size: 12px;
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
-}
-
-p.title {
-  font-weight: 500;
+  font-size: 1em;
 }
 
 ul.list-container {
   list-style-type: square;
-  font-size: 14px;
   display: flex;
   flex-direction: column;
 }

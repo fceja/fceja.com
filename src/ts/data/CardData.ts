@@ -1,28 +1,61 @@
 import { CardDataType } from "@appTypes/index";
 
 export const CardsData: Readonly<CardDataType> = Object.freeze([
-  // TODO - add an automation proj
-  // TODO - add fceja.com automation
   {
     cardDetails: {
       title: "fceja.com",
-      description: "View the code repository for this webpage.",
+      description: "What was used to build this webpage.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript", "HTML", "SCSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["React", "Axios", "Bootstrap", "Webpack"],
+          title: "Frontend",
+          listItems: [
+            "TypeScript",
+            "React",
+            "Axios",
+            "Bootstrap",
+            "HTML",
+            "SCSS",
+          ],
         },
         {
           title: "Cloud - AWS",
           listItems: ["S3", "CloudFront", "Route53"],
         },
         {
+          title: " Build / Bundle",
+          listItems: ["Webpack"],
+        },
+        {
+          title: "CI/CD",
+          listItems: ["Jenkins"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/google_maps_app",
+      imageUrl: "null",
+      urlLink: "https://fceja.com",
+    },
+  },
+  {
+    cardDetails: {
+      title: "fceja.com - Automation",
+      description: "Automation tests using Selenium and Jest for this webpage.",
+      listSections: [
+        {
+          title: "Language",
+          listItems: ["TypeScript"],
+        },
+        {
+          title: "Automation / Test Framework",
+          listItems: ["Selenium Webdriver", "Jest"],
+        },
+        {
           title: "Miscellaneous",
-          listItems: ["CI/CD: Jenkins"],
+          listItems: [
+            "Setup also includes tests for: https://www.selenium.dev/documentation/",
+          ],
         },
       ],
     },
@@ -30,65 +63,37 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     webLinks: {
       gitHubLink: "https://github.com/fceja/google_maps_app",
       imageUrl:
-        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/google_maps.png",
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/automation.png",
       urlLink:
         "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
     },
   },
   {
     cardDetails: {
-      title: "Google Map",
-      description: "After logging in, an interactive Google Map is populated",
+      title: "User Forum App",
+      description:
+        "A forum-like app. Standard users have the ability to:\
+        create an account, log in, create posts, and view community posts on the homepage.\
+        Moderators can do the same, as well as ban users or delete posts.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript", "HTML", "SCSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
+          title: "Frontend",
           listItems: [
-            "Postgres",
-            "React",
-            "Axios",
+            "Python",
+            "Django",
+            "Django Crispy Forms",
             "Bootstrap",
-            "Webpack",
-            "Google Maps",
+            "HTML",
+            "CSS",
           ],
         },
         {
-          title: "Cloud - AWS",
-          listItems: ["S3", "API Gateway", "Lambda", "RDS"],
-        },
-      ],
-    },
-    index: null,
-    webLinks: {
-      gitHubLink: "https://github.com/fceja/google_maps_app",
-      imageUrl:
-        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/google_maps.png",
-      urlLink:
-        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
-    },
-  },
-  {
-    cardDetails: {
-      title: "User Forum",
-      description:
-        "A Forum like app, featuring both standard and moderator users. Users have ability to:\
-         create an account, log in, create posts, and view community posts on homepage.\
-         Moderators can do the same, as well as ban users or delete posts.",
-      listSections: [
-        {
-          title: "Technologies",
-          listItems: ["Python", "HTML", "CSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["Postgres", "Django", "Django Crispy Forms", "Bootstrap"],
+          title: "Database",
+          listItems: ["Postgres"],
         },
         {
           title: "Cloud - Heroku",
-          listItems: ["Heroku Postgres", "todo - Instance"],
+          listItems: ["Heroku", "todo - Instance"],
         },
       ],
     },
@@ -104,15 +109,11 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     cardDetails: {
       title: "Emailer API",
       description:
-        "An Express Server API that provides an endpoint for email generation.",
+        "A NodeJS / ExpressJS API that provides an endpoint for email generation.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["Expess JS", "Nodemailer", "Node JS"],
+          title: "Backend",
+          listItems: ["TypeScript", "NodeJS", "ExpessJS", "Nodemailer"],
         },
         {
           title: "Cloud - AWS",
@@ -120,7 +121,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
         },
         {
           title: "Miscellaneous",
-          listItems: ["RestFul", "API key required", "CORS enabled"],
+          listItems: ["Restful", "API key required", "CORS enabled"],
         },
       ],
     },
@@ -134,19 +135,23 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
-      title: "Profile",
+      title: "Profile App",
       description:
         "A web app that can be used for a user/company profile.\
-         Features a home, gallery, and contact page.\
-         Contact form pings the Emailer API, where an email is generated and sent to the page owner.",
+        Features a home, gallery, and contact page.\
+         After submitting, contact form pings the Emailer API, where an email is generated and sent to the webpage owner.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript", "HTML", "SCSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["React", "Axios", "Bootstrap", "Redux"],
+          title: "FrontEnd",
+          listItems: [
+            "TypeScript",
+            "React",
+            "Axios",
+            "Bootstrap",
+            "Redux",
+            "HTML",
+            "SCSS",
+          ],
         },
         {
           title: "Cloud - AWS",
@@ -171,22 +176,23 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
       title: "Geolocation & IP",
       description:
         "After logging in, clicking the 'Get My Location' button will retreive users\
-        geo-coordinates and IP info (requests user permission).",
+      geo-coordinates and IP info (requests user permission).",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript", "HTML", "SCSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
+          title: "Frontend",
           listItems: [
-            "Postgres",
+            "TypeScript",
             "React",
             "Axios",
             "Bootstrap / React Bootstrap",
-            "Webpack",
+            "HTML",
+            "SCSS",
             "Google Maps",
           ],
+        },
+        {
+          title: "Database",
+          listItems: ["Postgres"],
         },
         {
           title: "Cloud - AWS",
@@ -198,6 +204,10 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
             "CloudFront",
             "Route53",
           ],
+        },
+        {
+          title: "Build / Bundle",
+          listItems: ["Webpack"],
         },
       ],
     },
@@ -212,15 +222,17 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   {
     cardDetails: {
       title: "Login JWT Auth API",
-      description: "Todo.",
+      description:
+        "An API that provides endpoints for: creating, retrieving, and logging-in users. \
+        Implemented with JWT authentication.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["TypeScript"],
+          title: "Backend",
+          listItems: ["TypeScript", "NodeJS", "ExpressJS", "JSON Web Token"],
         },
         {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["Postgres", "Node JS", "Express JS", "JSON Web Token"],
+          title: "Database",
+          listItems: ["Postgres"],
         },
         {
           title: "Miscellaneous",
@@ -238,15 +250,119 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
+      title: "Economic Calendar - Automation",
+      description:
+        "Uses Selenium and Pytest to parse economic calendar data from investing.com. Also outputs the data into a csv.",
+      listSections: [
+        {
+          title: "Language",
+          listItems: ["Python"],
+        },
+        {
+          title: "Automation / Test Framework",
+          listItems: ["Selenium Webdriver", "Pytest"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/google_maps_app",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/automation.png",
+      urlLink:
+        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
+    },
+  },
+  {
+    cardDetails: {
+      title: "Google Map App",
+      description: "After logging in, an interactive Google Map is populated.",
+      listSections: [
+        {
+          title: "Frontend",
+          listItems: [
+            "TypeScript",
+            "React",
+            "Axios",
+            "Bootstrap",
+            "HTML",
+            "SCSS",
+            "Google Maps",
+          ],
+        },
+        {
+          title: "Database",
+          listItems: ["Postgres"],
+        },
+        {
+          title: "Cloud - AWS",
+          listItems: ["S3", "API Gateway", "Lambda", "RDS"],
+        },
+        {
+          title: "Build / Bundle",
+          listItems: ["Webpack"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/google_maps_app",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/google_maps.png",
+      urlLink:
+        "http://dev.client.google-maps.s3-website-us-west-1.amazonaws.com/",
+    },
+  },
+  {
+    cardDetails: {
+      title: "Card Slider",
+      description: "A container featuring scrollable cards.",
+      listSections: [
+        {
+          title: "Frontend",
+          listItems: ["JavaScript", "React", "HTML", "CSS"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/card_slider",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/card_slider.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
+      title: "User vs A.I. Agent",
+      description:
+        "A 4-in-a-row game implementation using alpha beta search with pruning.",
+      listSections: [
+        {
+          title: "Language",
+          listItems: ["C++"],
+        },
+      ],
+    },
+    index: null,
+    webLinks: {
+      gitHubLink: "https://github.com/fceja/ai_agent_4_in_a_row",
+      imageUrl:
+        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/ai_agent_4_in_a_row.png",
+      urlLink: null,
+    },
+  },
+  {
+    cardDetails: {
       title: "Dice Game",
       description: "A poker style game with Dice.",
       listSections: [
         {
-          title: "Technologies",
+          title: "Language",
           listItems: ["Java"],
         },
         {
-          title: "Frameworks / Libraries / Modules",
+          title: "Dependencies",
           listItems: ["JavaFX", "Maven"],
         },
       ],
@@ -263,14 +379,15 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     cardDetails: {
       title: "Login JWT Auth API",
       description:
-        "An API that creates, retrieves, and logs-in users using JWT authentication.",
+        "An API that provides endpoints for: creating, retrieving, and logging-in users. \
+        Implemented with JWT authentication.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["GO"],
+          title: "Backend",
+          listItems: ["Go (Golang)", "JSON Web Token"],
         },
         {
-          title: "Frameworks / Libraries / Modules",
+          title: "Database",
           listItems: ["Postgres"],
         },
       ],
@@ -285,54 +402,12 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   },
   {
     cardDetails: {
-      title: "Card Slider",
-      description: "Todo.",
-      listSections: [
-        {
-          title: "Technologies",
-          listItems: ["JavaScript", "HTML", "CSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["React"],
-        },
-      ],
-    },
-    index: null,
-    webLinks: {
-      gitHubLink: "https://github.com/fceja/card_slider",
-      imageUrl:
-        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/card_slider.png",
-      urlLink: null,
-    },
-  },
-  {
-    cardDetails: {
-      title: "4-in-a-row vs A.I. Agent",
-      description: "Todo.",
-      listSections: [
-        {
-          title: "Technologies",
-          listItems: ["C++"],
-        },
-      ],
-    },
-    index: null,
-    webLinks: {
-      gitHubLink: "https://github.com/fceja/ai_agent_4_in_a_row",
-      imageUrl:
-        "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/ai_agent_4_in_a_row.png",
-      urlLink: null,
-    },
-  },
-  {
-    cardDetails: {
       title: "Bingo Card Game",
       description:
-        "Imitation of card game, where the game is won when a predetermined pattern is selected.",
+        "Imitation of card game, where the game is won when a pre-determined pattern is selected.",
       listSections: [
         {
-          title: "Technologies",
+          title: "Frontend",
           listItems: ["JavaScript", "HTML", "CSS"],
         },
         {
@@ -352,15 +427,11 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
   {
     cardDetails: {
       title: "Chipotle Mock",
-      description: "Mock webpage of Chipotle.",
+      description: "Mock webpage for Chipotle.",
       listSections: [
         {
-          title: "Technologies",
-          listItems: ["JavaScript", "HTML", "CSS"],
-        },
-        {
-          title: "Frameworks / Libraries / Modules",
-          listItems: ["JQuery"],
+          title: "Frontend",
+          listItems: ["JavaScript", "JQuery", "HTML", "CSS"],
         },
       ],
     },

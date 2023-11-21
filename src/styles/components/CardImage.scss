@@ -1,10 +1,17 @@
-.img-link-container {
-  cursor: pointer;
-  border-style: solid;
-  padding-bottom: 5px;
+div.img-link-container {
+  height: 130px;
+  padding: 15px;
 }
 
-div.img {
-  height: 130px;
-  max-height: 130px;
+a {
+  cursor: pointer;
+
+  &.link-container {
+    display: block;
+    height: 100%;
+  }
+}
+
+div.img-div {
+  height: 100%;
 }
