@@ -1,8 +1,7 @@
 # Description
 A carousel that contains cards with details and links for other [@fceja](https://github.com/fceja) projects.
 
-<br>
-You can view an implementation here -> "[fceja.com](http://fceja.com)"
+You can view an implementation here -> [fceja.com](https://fceja.com)
 
 # Installation
 ![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
