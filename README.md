@@ -4,7 +4,8 @@ A carousel that contains cards with details and links for other [@fceja](https:/
 You can view an implementation here -> [fceja.com](https://fceja.com)
 
 # Installation
-![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=eaeaea)
+![](https://shields.io/badge/OS-MacOS-informational?style=flat&logo=Apple&logoColor=white&color=eaeaea)
 1. Clone repo
 2. Install Node
    - ```https://nodejs.org/en/download```
