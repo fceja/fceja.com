@@ -33,7 +33,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     },
     index: null,
     webLinks: {
-      gitHubLink: "https://github.com/fceja/fceja",
+      gitHubLink: "https://github.com/fceja/fceja.com",
       imageUrl: null,
       urlLink: "https://fceja.com",
     },
@@ -55,7 +55,7 @@ export const CardsData: Readonly<CardDataType> = Object.freeze([
     },
     index: null,
     webLinks: {
-      gitHubLink: "https://github.com/fceja/fceja_automation",
+      gitHubLink: "https://github.com/fceja/fceja.com_automation",
       imageUrl:
         "https://s3.us-west-1.amazonaws.com/dev.assets.fceja/images/automation.png",
       urlLink: null,
