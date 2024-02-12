@@ -8,8 +8,8 @@ const App = () => {
   return (
     <Container fluid className="app-container p-0" id="app">
       <Routes>
-        <Route path="/*" element={<Navigate to={PAGE_PATHS.INDEX} />} />
-        <Route path={PAGE_PATHS.INDEX} element={<IndexPage />} />
+        <Route path="/*" element={<Navigate to={`${PAGE_PATHS.HOME}`} />} />
+        <Route path={PAGE_PATHS.HOME} element={<IndexPage />} />
       </Routes>
     </Container>
   );
