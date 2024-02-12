@@ -1,4 +1,4 @@
-import "@styles/components/CardImage.scss";
+import "@scss/components/CardImage.scss";
 import { CardImagePropsType } from "@appTypes/index";
 
 const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {

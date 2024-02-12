@@ -1,4 +1,4 @@
-import "@styles/components/SocialLinks.scss";
+import "@scss/components/SocialLinks.scss";
 
 const SocialLinks = () => {
   return (

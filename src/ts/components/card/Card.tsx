@@ -1,4 +1,4 @@
-import "@styles/components/Card.scss";
+import "@scss/components/Card.scss";
 import CardDetails from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
 import { CardPropsType } from "@appTypes/index";

@@ -1,4 +1,4 @@
-import "@styles/components/Card.scss";
+import "@scss/components/Card.scss";
 import { CardDataArrayProps } from "@appTypes/index";
 import Card from "@components/card/Card";
 

@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 
-import "@styles/pages/ProjectsPage.scss";
+import "@scss/pages/ProjectsPage.scss";
 import CardCarousel from "@components/cardCarousel/CardCarousel";
 import SocialLinks from "@components/socialLinks/SocialLinks";
 

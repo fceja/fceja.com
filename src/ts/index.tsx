@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import "@styles/Global.scss";
+import "@scss/Global.scss";
 import Root from "@components/Root";
 
 const root = ReactDOM.createRoot(

@@ -1,4 +1,4 @@
-import "@styles/components/CardDetails.scss";
+import "@scss/components/CardDetails.scss";
 import { CardDetailsPropsType } from "@appTypes/index";
 
 const CardDetails: React.FC<CardDetailsPropsType> = (cardDetailsProps) => {

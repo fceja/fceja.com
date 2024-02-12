@@ -21,7 +21,7 @@
       "@components/*": ["./src/ts/components/*"],
       "@data/*": ["./src/ts/data/*"],
       "@pages/*": ["./src/ts/pages/*"],
-      "@styles/*": ["./src/styles/*"],
+      "@scss/*": ["./src/scss/*"],
       "@appTypes/*": ["./src/ts/types/*"],
       "@utils/*": ["./src/ts/utils/*"]
     },
