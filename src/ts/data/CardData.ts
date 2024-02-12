@@ -1,6 +1,6 @@
-import { CardDataType } from "@appTypes/index";
+import { CardType } from "@components/cards/CardsTypes"
 
-export const CardsData: Readonly<CardDataType> = Object.freeze([
+export const CardsData: Readonly<CardType[]> = Object.freeze([
   {
     cardDetails: {
       title: "fceja.com",

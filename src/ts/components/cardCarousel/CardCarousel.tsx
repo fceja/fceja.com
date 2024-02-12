@@ -2,8 +2,8 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Stack from "react-bootstrap/Stack";
 
 import "@scss/components/CardCarousel.scss";
-import Cards from "@components/cards/Cards";
 import { CardsData } from "@data/CardData";
+import Cards from "@components/cards/Cards";
 import { ScrollLeftOrRight } from "@utils/pageActions/ScrollLeftOrRight";
 
 const CardCarousel: React.FC = () => {
@@ -21,7 +21,7 @@ const CardCarousel: React.FC = () => {
         className="cards-container"
         id="cards-container"
       >
-        <Cards cardsData={CardsData}></Cards>
+        <Cards cardArray={CardsData}></Cards>
       </div>
       <MdChevronRight
         className="icon-right"

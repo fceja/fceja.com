@@ -1,7 +1,7 @@
 import "@scss/components/CardDetails.scss";
-import { CardDetailsPropsType } from "@appTypes/index";
+import { CardDetailsType } from "./CardDetailsTypes";
 
-const CardDetails: React.FC<CardDetailsPropsType> = (cardDetailsProps) => {
+const CardDetails: React.FC<CardDetailsType> = (cardDetailsProps) => {
   const generateListItems = (listItems: string[]) => {
     const generateSubList = () => {
       return (

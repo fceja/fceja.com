@@ -22,7 +22,6 @@
       "@data/*": ["./src/ts/data/*"],
       "@pages/*": ["./src/ts/pages/*"],
       "@scss/*": ["./src/scss/*"],
-      "@appTypes/*": ["./src/ts/types/*"],
       "@utils/*": ["./src/ts/utils/*"]
     },
     "resolveJsonModule": true,

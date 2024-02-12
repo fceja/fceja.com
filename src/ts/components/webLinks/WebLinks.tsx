@@ -1,7 +1,7 @@
 import "@scss/components/WebLinks.scss";
-import { WebLinksPropsType } from "@appTypes/index";
+import { WebLinksType } from "./WebLinksTypes";
 
-const WebLinks: React.FC<WebLinksPropsType> = (webLinksprops) => {
+const WebLinks: React.FC<WebLinksType> = (webLinksprops) => {
   return (
     <>
       {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.  */}

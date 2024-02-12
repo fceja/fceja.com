@@ -1,7 +1,7 @@
 import "@scss/components/CardImage.scss";
-import { CardImagePropsType } from "@appTypes/index";
+import { CardImageType } from "./CardImageTypes";
 
-const CardImage: React.FC<CardImagePropsType> = (cardImageProps) => {
+const CardImage: React.FC<CardImageType> = (cardImageProps) => {
   const backgroundImageDiv = (
     <div
       className="img-div"
