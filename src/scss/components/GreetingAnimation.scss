@@ -9,7 +9,7 @@
   line-height: 1em;
 }
 
-.ml11 .letter1, .ml12 .letter2 {
+.ml11 .letter1, .ml12 .letter2, .ml13 .letter3 {
   @include letter-style
 }
 
@@ -18,7 +18,7 @@
   left: 0;
 }
 
-.ml11 .line1, .ml12 .line2 {
+.ml11 .line1, .ml12 .line2, .ml13 .line3 {
   @include line-position
 }
 
@@ -32,7 +32,7 @@
   transform-origin: 0 50%;
 }
 
-.ml11 .line, .ml12 .line {
+.ml11 .line, .ml12 .line, .ml13 .line {
   @include line-styles
 }
 
@@ -45,7 +45,7 @@
 
 }
 
-.ml11 .text-wrapper, .ml12 .text-wrapper {
+.ml11 .text-wrapper, .ml12 .text-wrapper, .ml13 .text-wrapper {
   @include text-wrapper-styles
 }
 
@@ -54,6 +54,10 @@
   font-size: 3.5em;
 }
 
-.ml11, .ml12 {
+.ml11, .ml12, .ml13 {
   @include title-styles;
+}
+
+#heart {
+  color: #981319;
 }
