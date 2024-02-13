@@ -4,7 +4,7 @@ import "@scss/pages/ProjectsPage.scss";
 import CardCarousel from "@components/cardCarousel/CardCarousel";
 import SocialLinks from "@components/socialLinks/SocialLinks";
 
-const IndexPage = () => {
+const ProjectsPage = () => {
   return (
     <Container fluid className="index-page">
       <p
@@ -25,4 +25,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default ProjectsPage;
