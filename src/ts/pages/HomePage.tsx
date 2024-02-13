@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 
 import "@scss/pages/HomePage.scss";
-import Loading from "@components/Loading"
+import Loading from "@common/components/Loading"
+import Greeting from "@components/greeting/Greeting"
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
             {isLoading &&
                 <Loading />
             }
+            < Greeting />
             <div className="home-page-intro" >
             </div>
         </>

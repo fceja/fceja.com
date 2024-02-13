@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import Loading from "@components/Loading"
+import Loading from "@common/components/Loading"
 import { ResponseData } from "@components/headlines/HeadlinesTypes"
 
 const apiUrl = ""
