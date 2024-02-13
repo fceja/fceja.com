@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es.js';
 import "@scss/components/GreetingAnimation.scss"
 
 export const GreetingAnimation = () => {
-    var textWrapper = document.querySelector('.ml11 .letters1');
+    let textWrapper = document.querySelector('.ml11 .letters1');
     if (textWrapper && textWrapper.textContent) {
         textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter1'>$&</span>");
 
@@ -20,7 +20,7 @@ export const GreetingAnimation = () => {
                 translateX: [0, textWrapper.getBoundingClientRect().width + 10],
                 easing: "easeOutExpo",
                 duration: 700,
-                delay: 1200
+                delay: 300
             }).add({
                 targets: '.ml11 .letter1',
                 opacity: [0, 1],
@@ -37,7 +37,7 @@ export const GreetingAnimation = () => {
             });
     }
 
-    var textWrapper2 = document.querySelector('.ml12 .letters2');
+    let textWrapper2 = document.querySelector('.ml12 .letters2');
     if (textWrapper2 && textWrapper2.textContent) {
         textWrapper2.innerHTML = textWrapper2.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter2'>$&</span>");
         anime.timeline({ loop: false })
@@ -53,7 +53,7 @@ export const GreetingAnimation = () => {
                 translateX: [0, textWrapper2.getBoundingClientRect().width + 10],
                 easing: "easeOutExpo",
                 duration: 700,
-                delay: 2000
+                delay: 1500
             }).add({
                 targets: '.ml12 .letter2',
                 opacity: [0, 1],
@@ -66,7 +66,7 @@ export const GreetingAnimation = () => {
                 opacity: 0,
                 duration: 1000,
                 easing: "easeOutExpo",
-                delay: 2200
+                delay: 2000
             });
     }
 }
