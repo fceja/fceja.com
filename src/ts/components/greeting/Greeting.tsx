@@ -1,19 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
 import { GreetingAnimation } from "./GreetingAnimation"
-import { onCompleteType } from "./GreetingTypes";
 
 const Greeting = () => {
     const [isInitiated, setIsInitiated] = useState(false)
+    const [isDone, setIsDone] = useState(false)
     const line1Ref = useRef<HTMLHeadingElement>(null)
     const line2Ref = useRef<HTMLHeadingElement>(null)
     const line3Ref = useRef<HTMLHeadingElement>(null)
 
     useEffect(() => {
-        const onComplete: onCompleteType = () => {
-            setIsInitiated(true)
-        }
-        GreetingAnimation(onComplete)
+        setIsInitiated(true)
+        GreetingAnimation()
     }, [])
 
     /**
@@ -37,40 +35,36 @@ const Greeting = () => {
 
                 // checks if all zero
                 if (!parseFloat(opacity1) && !parseFloat(opacity2) && !parseFloat(opacity3)) {
-                    // remove elems from DOM
-                    htmlElem1.remove();
-                    htmlElem2.remove();
-                    htmlElem3.remove();
-
+                    setIsDone(true)
                     clearInterval(intervalId)
                 }
             }, 750)
         }
     }, [isInitiated])
 
-    const animationHeadingElems = <>
-        <h1 ref={line1Ref} className="heading-1">
-            <span className="text-wrapper">
-                <span className="line line1"></span>
-                <span className="letters1">Hi.</span>
-            </span>
-        </h1>
-        <h1 ref={line2Ref} className="heading-2">
-            <span className="text-wrapper">
-                <span className="line line2"></span>
-                <span className="letters2">I'm Francisco.</span>
-            </span>
-        </h1>
-        <h1 ref={line3Ref} className="heading-3">
-            <span className="text-wrapper">
-                <span className="line line3"></span>
-                <span className="letters3">I <span id="heart">&#x2764;</span> code.</span>
-            </span>
-        </h1>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    </>
+    return isDone ? null :
+        <>
+            <h1 ref={line1Ref} className="heading-1">
+                <span className="text-wrapper">
+                    <span className="line line1"></span>
+                    <span className="letters1">Hi.</span>
+                </span>
+            </h1>
+            <h1 ref={line2Ref} className="heading-2">
+                <span className="text-wrapper">
+                    <span className="line line2"></span>
+                    <span className="letters2">I'm Francisco.</span>
+                </span>
+            </h1>
+            <h1 ref={line3Ref} className="heading-3">
+                <span className="text-wrapper">
+                    <span className="line line3"></span>
+                    <span className="letters3">I <span>&#x2764;</span> code.</span>
+                </span>
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        </>
 
-    return (animationHeadingElems)
 }
 
 export default Greeting

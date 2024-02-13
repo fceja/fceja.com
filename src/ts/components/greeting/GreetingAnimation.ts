@@ -1,9 +1,8 @@
 import anime from 'animejs/lib/anime.es.js';
 
 import "@scss/components/GreetingAnimation.scss"
-import { onCompleteType } from "./GreetingTypes";
 
-export const GreetingAnimation = (onComplete: onCompleteType) => {
+export const GreetingAnimation = () => {
     let textWrapper = document.querySelector('.heading-1 .letters1');
     if (textWrapper && textWrapper.textContent) {
         textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter1'>$&</span>");
@@ -115,5 +114,4 @@ export const GreetingAnimation = (onComplete: onCompleteType) => {
             });
     }
 
-    onComplete()
 }
