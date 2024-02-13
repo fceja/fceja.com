@@ -3,7 +3,12 @@ import anime from 'animejs/lib/anime.es.js';
 import "@scss/components/GreetingAnimation.scss"
 
 export const GreetingAnimation = () => {
-    let textWrapper = document.querySelector('.heading-1 .letters1');
+    const textWrapper = document.querySelector('.heading-1 .letters1');
+    const heading1 = document.querySelector('.heading-1') as HTMLElement;
+    if (heading1) {
+        heading1.style.display = '' // reset to its default
+    }
+
     if (textWrapper && textWrapper.textContent) {
         textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter1'>$&</span>");
 
@@ -37,7 +42,12 @@ export const GreetingAnimation = () => {
             });
     }
 
-    let textWrapper2 = document.querySelector('.heading-2 .letters2');
+    const textWrapper2 = document.querySelector('.heading-2 .letters2');
+    const heading2 = document.querySelector('.heading-2') as HTMLElement;
+    if (heading2) {
+        heading2.style.display = '' // reset to its default
+    }
+
     if (textWrapper2 && textWrapper2.textContent) {
         textWrapper2.innerHTML = textWrapper2.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter2'>$&</span>");
         anime.timeline({ loop: false })
@@ -60,7 +70,6 @@ export const GreetingAnimation = () => {
                 easing: "easeOutExpo",
                 duration: 600,
                 offset: '-=775',
-                // delay: (el, i) => 34 * (i + 1)
                 delay: (_, i) => 34 * (i + 1)
             }).add({
                 targets: '.heading-2',
@@ -71,7 +80,11 @@ export const GreetingAnimation = () => {
             });
     }
 
-    let textWrapper3 = document.querySelector('.heading-3 .letters3');
+    const textWrapper3 = document.querySelector('.heading-3 .letters3');
+    const heading3 = document.querySelector('.heading-3') as HTMLElement;
+    if (heading3) {
+        heading3.style.display = '' // reset to its default
+    }
     if (textWrapper3 && textWrapper3.textContent) {
         textWrapper3.innerHTML = textWrapper3.textContent.replace(/([^\x00-\x80]|\w|\.|'|,)/g, "<span class='letter3'>$&</span>");
 
@@ -113,5 +126,4 @@ export const GreetingAnimation = () => {
                 delay: 1800
             });
     }
-
 }

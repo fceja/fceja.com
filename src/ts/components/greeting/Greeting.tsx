@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { GreetingAnimation } from "./GreetingAnimation"
 
+
 const Greeting = () => {
     const [isInitiated, setIsInitiated] = useState(false)
     const [isDone, setIsDone] = useState(false)
@@ -44,19 +45,19 @@ const Greeting = () => {
 
     return isDone ? null :
         <>
-            <h1 ref={line1Ref} className="heading-1">
+            <h1 ref={line1Ref} className="heading-1" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line1"></span>
-                    <span className="letters1">Hi.</span>
+                    <span className="letters1">Hello.</span>
                 </span>
             </h1>
-            <h1 ref={line2Ref} className="heading-2">
+            <h1 ref={line2Ref} className="heading-2" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line2"></span>
                     <span className="letters2">I'm Francisco.</span>
                 </span>
             </h1>
-            <h1 ref={line3Ref} className="heading-3">
+            <h1 ref={line3Ref} className="heading-3" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line3"></span>
                     <span className="letters3">I <span>&#x2764;</span> code.</span>
@@ -64,7 +65,6 @@ const Greeting = () => {
             </h1>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         </>
-
 }
 
 export default Greeting
