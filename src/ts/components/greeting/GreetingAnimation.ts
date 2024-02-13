@@ -110,7 +110,7 @@ export const GreetingAnimation = () => {
                 translateX: [0, textWrapper3.getBoundingClientRect().width + 10],
                 easing: "easeOutExpo",
                 duration: 700,
-                delay: 3400
+                delay: 2800
             }).add({
                 targets: '.heading-3 .letter3',
                 opacity: [0, 1],
@@ -123,7 +123,7 @@ export const GreetingAnimation = () => {
                 opacity: 0,
                 duration: 1000,
                 easing: "easeOutExpo",
-                delay: 1800
+                delay: 1700
             });
     }
 }
