@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { GreetingAnimation } from "./GreetingAnimation"
 
 
+const headings = 3
+
 const Greeting = () => {
     const [isInitiated, setIsInitiated] = useState(false)
     const [isDone, setIsDone] = useState(false)
@@ -10,9 +12,10 @@ const Greeting = () => {
     const line2Ref = useRef<HTMLHeadingElement>(null)
     const line3Ref = useRef<HTMLHeadingElement>(null)
 
+
     useEffect(() => {
         setIsInitiated(true)
-        GreetingAnimation()
+        GreetingAnimation(headings)
     }, [])
 
     /**

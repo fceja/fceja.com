@@ -1,3 +1,4 @@
+@import "../Variables.scss";
 
 /* animations */
 
@@ -9,8 +10,10 @@
   line-height: 1em;
 }
 
-.heading-1 .letter1, .heading-2 .letter2, .heading-3 .letter3 {
-  @include letter-style
+.heading-1 .letter1,
+.heading-2 .letter2,
+.heading-3 .letter3 {
+  @include letter-style;
 }
 
 @mixin line-position {
@@ -18,8 +21,10 @@
   left: 0;
 }
 
-.heading-1 .line1, .heading-2 .line2, .heading-3 .line3 {
-  @include line-position
+.heading-1 .line1,
+.heading-2 .line2,
+.heading-3 .line3 {
+  @include line-position;
 }
 
 @mixin line-styles {
@@ -32,8 +37,10 @@
   transform-origin: 0 50%;
 }
 
-.heading-1 .line, .heading-2 .line, .heading-3 .line {
-  @include line-styles
+.heading-1 .line,
+.heading-2 .line,
+.heading-3 .line {
+  @include line-styles;
 }
 
 @mixin text-wrapper-styles {
@@ -42,11 +49,12 @@
   padding-top: 0.1em;
   padding-right: 0.05em;
   padding-bottom: 0.15em;
-
 }
 
-.heading-1 .text-wrapper, .heading-2 .text-wrapper, .heading-3 .text-wrapper {
-  @include text-wrapper-styles
+.heading-1 .text-wrapper,
+.heading-2 .text-wrapper,
+.heading-3 .text-wrapper {
+  @include text-wrapper-styles;
 }
 
 @mixin title-styles {
@@ -54,12 +62,14 @@
   font-size: 3.5em;
 }
 
-.heading-1, .heading-2, .heading-3 {
+.heading-1,
+.heading-2,
+.heading-3 {
   @include title-styles;
 }
 
 #heart {
-  color: #981319;
+  color: $greeting-heart-color;
 }
 
 .heading- {
