@@ -1,10 +1,24 @@
 @import "../Variables.scss";
 
 /* animations */
-
 /*
 * credit: Tobias Ahlin, moving-letters
 */
+@mixin title-styles {
+  font-weight: 700;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
+    font-size: 1.5em;
+  }
+
+  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    font-size: 2em;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 3em;
+  }
+}
+
 @mixin letter-style {
   display: inline-block;
   line-height: 1em;
@@ -57,11 +71,6 @@
   @include text-wrapper-styles;
 }
 
-@mixin title-styles {
-  font-weight: 700;
-  font-size: 3.5em;
-}
-
 .heading-1,
 .heading-2,
 .heading-3 {
@@ -74,12 +83,14 @@
 
 .heading- {
   &1 {
-    margin-left: 10%;
+    text-align: left;
+    margin-left: 3%;
   }
   &2 {
     text-align: center;
   }
   &3 {
     text-align: right;
+    margin-right: 3%;
   }
 }
