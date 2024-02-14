@@ -14,7 +14,7 @@ export const GreetingAnimation = (headings: number) => {
 
         // make display csss prop visible
         if (heading) {
-            heading.style.display = '' // reset to its default
+            heading.style.display = 'block' // make visible
         }
 
         // if heading found
