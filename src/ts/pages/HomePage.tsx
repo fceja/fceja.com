@@ -14,7 +14,8 @@ const HomePage = () => {
                 <Loading />
             }
             < Greeting />
-            <div className="home-page-intro" >
+            <div className="home-page-container shadow" >
+                <span className="home-page-intro">Tools and Technologies I've worked with...</span>
             </div>
         </>
     )
