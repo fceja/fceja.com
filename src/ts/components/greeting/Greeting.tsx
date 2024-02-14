@@ -30,37 +30,38 @@ const Greeting = () => {
         const htmlElem3 = line3Ref.current;
 
         // check if elem's exist in DOM
-        if (htmlElem1 && htmlElem2 && htmlElem3) {
-            const intervalId = setInterval(() => {
-                // retrieve opacities
-                const opacity1 = window.getComputedStyle(htmlElem1).opacity;
-                const opacity2 = window.getComputedStyle(htmlElem2).opacity;
-                const opacity3 = window.getComputedStyle(htmlElem3).opacity;
+        if (!htmlElem1 || !htmlElem2 || !htmlElem3) return
 
-                // checks if all zero
-                if (!parseFloat(opacity1) && !parseFloat(opacity2) && !parseFloat(opacity3)) {
-                    setIsDone(true)
-                    clearInterval(intervalId)
-                }
-            }, 750)
-        }
+        const intervalId = setInterval(() => {
+            // retrieve opacities
+            const opacity1 = window.getComputedStyle(htmlElem1).opacity;
+            const opacity2 = window.getComputedStyle(htmlElem2).opacity;
+            const opacity3 = window.getComputedStyle(htmlElem3).opacity;
+
+            // checks if all zero
+            if (!parseFloat(opacity1) && !parseFloat(opacity2) && !parseFloat(opacity3)) {
+                setIsDone(true)
+                clearInterval(intervalId)
+            }
+        }, 750)
+
     }, [isInitiated])
 
     return isDone ? null :
         <>
-            <h1 ref={line1Ref} className="heading-1" style={{ display: 'none' }}>
+            <h1 ref={line1Ref} className="h1-greeting heading-1" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line1"></span>
                     <span className="letters1">Hello.</span>
                 </span>
             </h1>
-            <h1 ref={line2Ref} className="heading-2" style={{ display: 'none' }}>
+            <h1 ref={line2Ref} className="h1-greeting heading-2" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line2"></span>
                     <span className="letters2">I'm Francisco.</span>
                 </span>
             </h1>
-            <h1 ref={line3Ref} className="heading-3" style={{ display: 'none' }}>
+            <h1 ref={line3Ref} className="h1-greeting heading-3" style={{ display: 'none' }}>
                 <span className="text-wrapper">
                     <span className="line line3"></span>
                     <span className="letters3">I <span>&#x2764;</span> code.</span>
