@@ -1,15 +1,17 @@
 @import "../Variables.scss";
 
 .intro-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: 15px;
+
     @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
-        right: 2%;
         padding: 5px;
         height: 150px;
         width: 200px;
     }
 
     @media (min-width: $breakpoint-sm) {
-        right: 4%;
         height: 400px;
         width: 400px;
     }
