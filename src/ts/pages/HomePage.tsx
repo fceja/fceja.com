@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import "@scss/pages/HomePage.scss";
 import Loading from "@common/components/Loading"
 import Greeting from "@components/greeting/Greeting"
+import Intro from "@components/intro/Intro"
 
 
 const HomePage = () => {
@@ -14,9 +15,7 @@ const HomePage = () => {
                 <Loading />
             }
             < Greeting />
-            <div className="home-page-container shadow" >
-                <span className="home-page-intro">Tools and Technologies I've worked with...</span>
-            </div>
+            < Intro />
         </>
     )
 
