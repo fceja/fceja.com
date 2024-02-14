@@ -13,6 +13,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hidden {
+.init-hidden {
   display: none;
+}
+
+.init-zero-opac {
+  opacity: 0;
 }

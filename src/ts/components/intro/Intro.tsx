@@ -17,12 +17,14 @@ const Intro = () => {
     }, [])
 
     useEffect(() => {
-        const divElem = document.getElementById('intro-container')
+        const divElems = document.getElementsByClassName('intro-container')
+
+        const divElem = divElems[0] as HTMLElement
 
         if (!divElem) return
         if (!isGreetAnimeDone) return
 
-        divElem.style.display = '';
+        divElem.style.display = 'block'; // make visible
 
         let cur_opacity = 0.0
         const intervalId = setInterval(() => {
@@ -36,7 +38,7 @@ const Intro = () => {
     }, [isGreetAnimeDone])
 
     return !isGreetAnimeDone ? null :
-        <div id="intro-container" className="shadow" style={{ display: 'none', opacity: 0 }}>
+        <div className="intro-container shadow init-hidden init-zero-opac">
             <span className="intro-text">Tools and Technologies I've worked with... ↓</span>
         </div>
 }

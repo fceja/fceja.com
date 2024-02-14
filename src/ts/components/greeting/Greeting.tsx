@@ -49,19 +49,19 @@ const Greeting = () => {
 
     return isDone ? null :
         <>
-            <h1 ref={line1Ref} className="h1-greeting heading-1 hidden">
+            <h1 ref={line1Ref} className="h1-greeting heading-1 init-hidden">
                 <span className="text-wrapper">
                     <span className="line line1"></span>
                     <span className="letters1">Hello.</span>
                 </span>
             </h1>
-            <h1 ref={line2Ref} className="h1-greeting heading-2 hidden">
+            <h1 ref={line2Ref} className="h1-greeting heading-2 init-hidden">
                 <span className="text-wrapper">
                     <span className="line line2"></span>
                     <span className="letters2">I'm Francisco.</span>
                 </span>
             </h1>
-            <h1 ref={line3Ref} className="h1-greeting heading-3 hidden">
+            <h1 ref={line3Ref} className="h1-greeting heading-3 init-hidden">
                 <span className="text-wrapper">
                     <span className="line line3"></span>
                     <span className="letters3">I <span>&#x2764;</span> code.</span>
