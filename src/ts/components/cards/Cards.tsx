@@ -1,10 +1,21 @@
 import "@scss/components/Card.scss";
-import CardDetails from "@components/cardDetails/CardDetails";
+import CardDetails, {
+  CardDetailsType,
+} from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
-import { CardArrayType } from "./CardsTypes";
-import WebLinks from "@components/webLinks/WebLinks";
+import WebLinks, { WebLinksType } from "@components/webLinks/WebLinks";
 
-const Cards: React.FC<CardArrayType> = ({ cardArray }) => {
+type CardTypeArray = {
+  cardArray: readonly CardType[];
+};
+
+export type CardType = {
+  cardDetails: CardDetailsType;
+  index: number | null;
+  webLinks: WebLinksType;
+};
+
+const Cards: React.FC<CardTypeArray> = ({ cardArray }) => {
   return (
     <>
       {cardArray.map((card: any, index: any) => {
@@ -18,7 +29,8 @@ const Cards: React.FC<CardArrayType> = ({ cardArray }) => {
             <CardImage {...card.webLinks} />
             <CardDetails {...card.cardDetails} />
             <WebLinks {...card.webLinks} />
-          </div>)
+          </div>
+        );
       })}
     </>
   );

@@ -1,4 +1,14 @@
-import { LinksDataArray } from "./LinkDataType";
+type LinksDataArray = {
+  languageLibraryFramework: LinksDataType[];
+};
+
+type LinksDataType = {
+  href: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+};
 
 export const LinksData: Readonly<LinksDataArray> = Object.freeze({
   languageLibraryFramework: [

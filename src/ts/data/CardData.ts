@@ -1,4 +1,4 @@
-import { CardType } from "@components/cards/CardsTypes"
+import { CardType } from "@components/cards/Cards";
 
 export const CardsData: Readonly<CardType[]> = Object.freeze([
   {

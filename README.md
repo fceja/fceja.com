@@ -1,22 +1,26 @@
 # Description
+
 A carousel that contains cards with details and links for other [@fceja](https://github.com/fceja) projects.
 
 You can view an implementation here -> [fceja.com](https://fceja.com)
 
-# Installation
-![](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=eaeaea)
-![](https://shields.io/badge/OS-MacOS-informational?style=flat&logo=Apple&logoColor=white&color=eaeaea)
+## Installation
+
+![Linux](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=eaeaea)
+![MacOS](https://shields.io/badge/OS-MacOS-informational?style=flat&logo=Apple&logoColor=white&color=eaeaea)
+
 1. Clone repo
 2. Install Node
-   - ```https://nodejs.org/en/download```
+   - `https://nodejs.org/en/download`
 3. At project root, run:
-   - ```npm install```
+   - `npm install`
    - This will install all project package dependencies
 4. At project root, run:
-   - ```npm start```
-   - App will be served on ```http://localhost:8080/```
+   - `npm start`
+   - App will be served on `http://localhost:8080/`
 
-# Technologies & Tools
+## Technologies & Tools
+
 <p>
   <a
     href="https://www.typescriptlang.org/"

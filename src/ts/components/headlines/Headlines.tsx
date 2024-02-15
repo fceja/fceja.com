@@ -1,61 +1,66 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-import Loading from "@common/components/Loading"
-import { ResponseData } from "@components/headlines/HeadlinesTypes"
+import Loading from "@common/components/Loading";
 
-const apiUrl = ""
+const apiUrl = "";
+
+type ResponseData = {
+  status: string;
+  articles: [
+    {
+      source: { name: string };
+      title: string;
+    },
+  ];
+};
 
 const Headlines = () => {
-    const [isLoading, setIsLoading] = useState(false)
-    const [headlines, setHeadlines] = useState<string[]>([])
-    const [responseData, setResponseData] = useState<ResponseData | null>(null)
+  const [isLoading, setIsLoading] = useState(false);
+  const [headlines, setHeadlines] = useState<string[]>([]);
+  const [responseData, setResponseData] = useState<ResponseData | null>(null);
 
-    useEffect(() => {
-        if (!responseData || responseData.status !== 'ok') return;
+  useEffect(() => {
+    if (!responseData || responseData.status !== "ok") return;
 
-        responseData.articles.forEach((article) => {
-            if (article.title.includes('Removed')) {
-                return // continue
+    responseData.articles.forEach((article) => {
+      if (article.title.includes("Removed")) {
+        return; // continue
+      }
+      setHeadlines((headlines) => [
+        ...headlines,
+        `${article.source.name} - ${article.title}`,
+      ]);
+    });
+  }, [responseData]);
 
-            }
-            setHeadlines(headlines => [...headlines, `${article.source.name} - ${article.title}`])
-        })
+  useEffect(() => {
+    console.log(`headlines 3-> ${headlines}`);
+  }, [headlines]);
 
-    }, [responseData])
+  useEffect(() => {
+    setIsLoading(true);
 
-    useEffect(() => {
-        console.log(`headlines 3-> ${headlines}`)
+    // fetch data
+    const fetchData = async () => {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        setResponseData(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
 
-    }, [headlines])
+  return (
+    <div>
+      Headlines
+      <Loading />
+    </div>
+  );
+};
 
-
-    useEffect(() => {
-        setIsLoading(true)
-
-        // fetch data
-        const fetchData = async () => {
-            try {
-                const response = await fetch(apiUrl)
-                const data = await response.json()
-                setResponseData(data)
-
-            } catch (error) {
-                console.error(error)
-            } finally {
-                setIsLoading(false)
-            }
-        }
-        fetchData()
-
-    }, [])
-
-    return (
-        <div>
-            Headlines
-            <Loading />
-        </div>
-
-    )
-}
-
-export default Headlines
+export default Headlines;

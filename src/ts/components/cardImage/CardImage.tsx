@@ -1,12 +1,14 @@
 import "@scss/components/CardImage.scss";
-import { CardImageType } from "./CardImageTypes";
+import { WebLinksType } from "@components/webLinks/WebLinks";
 
-const CardImage: React.FC<CardImageType> = (cardImageProps) => {
+type CardImageType = WebLinksType;
+
+const CardImage: React.FC<CardImageType> = (props) => {
   const backgroundImageDiv = (
     <div
       className="img-div"
       style={{
-        backgroundImage: `url(${cardImageProps.imageUrl})`,
+        backgroundImage: `url(${props.imageUrl})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -14,17 +16,17 @@ const CardImage: React.FC<CardImageType> = (cardImageProps) => {
     ></div>
   );
 
-  return !cardImageProps.imageUrl ? (
+  return !props.imageUrl ? (
     // imageUrl is null, return empty div with formatting
     <div className="pt-3"></div>
   ) : (
     // imageUrl exists
     <div className="img-link-container">
-      {cardImageProps.urlLink ? (
+      {props.urlLink ? (
         // urlLink exists
         <a
           className="link-container"
-          href={cardImageProps.urlLink}
+          href={props.urlLink}
           target="_blank"
           rel="noopener noreferrer"
         >

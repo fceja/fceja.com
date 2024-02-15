@@ -1,5 +1,15 @@
 import "@scss/components/CardDetails.scss";
-import { CardDetailsType } from "./CardDetailsTypes";
+
+export type CardDetailsType = {
+  title: string;
+  description: string;
+  listSections: ListSectionType[];
+};
+
+type ListSectionType = {
+  title: string;
+  listItems: string[];
+};
 
 const CardDetails: React.FC<CardDetailsType> = (cardDetailsProps) => {
   const generateListItems = (listItems: string[]) => {
