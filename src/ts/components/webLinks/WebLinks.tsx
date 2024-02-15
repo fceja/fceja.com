@@ -1,12 +1,12 @@
 import "@scss/components/WebLinks.scss";
 
-export type WebLinksType = {
+export type WebLinksProps = {
   gitHubLink: string;
   imageUrl: string | null;
   urlLink: string | null;
 };
 
-const WebLinks = (props: WebLinksType) => {
+const WebLinks = (props: WebLinksProps) => {
   return (
     <>
       {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.  */}

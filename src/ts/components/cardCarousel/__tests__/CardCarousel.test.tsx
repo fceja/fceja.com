@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
 import CardCarousel from "@components/cardCarousel/CardCarousel";
-import { CardsData } from "@data/CardData";
+import { CardsContent } from "@content/CardContent";
 
 // CardCarousel component tests
 describe("CardCarousel component tests", () => {
@@ -12,6 +12,6 @@ describe("CardCarousel component tests", () => {
     const htmlElem = screen.getAllByTestId("card");
 
     // validate lengths
-    expect(htmlElem.length).toBe(CardsData.length);
+    expect(htmlElem.length).toBe(CardsContent.length);
   });
 });

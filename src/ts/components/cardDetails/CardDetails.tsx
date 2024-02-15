@@ -30,7 +30,7 @@ const CardDetails: React.FC<CardDetailsType> = (cardDetailsProps) => {
     return (
       <>
         {/* generates list sections */}
-        {cardDetailsProps.listSections.map((section, index) => (
+        {props.listSections.map((section, index) => (
           <li key={index}>
             <strong key={`title-${index}`} className="list-sec-title">
               {section.title}
@@ -46,8 +46,8 @@ const CardDetails: React.FC<CardDetailsType> = (cardDetailsProps) => {
 
   return (
     <div>
-      <p className="title text-center text-wrap">{cardDetailsProps.title}</p>
-      <p className="description text-wrap">{cardDetailsProps.description}</p>
+      <p className="title text-center text-wrap">{props.title}</p>
+      <p className="description text-wrap">{props.description}</p>
       <ul className="list-container">{listComponent}</ul>
     </div>
   );

@@ -2,7 +2,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Stack from "react-bootstrap/Stack";
 
 import "@scss/components/CardCarousel.scss";
-import { CardsData } from "@data/CardData";
+import { CardsContent } from "@content/CardContent";
 import Cards from "@components/cards/Cards";
 import { ScrollLeftOrRight } from "@utils/pageActions/ScrollLeftOrRight";
 
@@ -18,7 +18,7 @@ const CardCarousel = () => {
         onClick={() => ScrollLeftOrRight("left", "cards-container")}
       />
       <div className="cards-container" id="cards-container">
-        <Cards cardArray={CardsData}></Cards>
+        <Cards cardArray={CardsContent}></Cards>
       </div>
       <MdChevronRight
         className="icon-right"

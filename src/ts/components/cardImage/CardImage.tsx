@@ -1,9 +1,9 @@
 import "@scss/components/CardImage.scss";
-import { WebLinksType } from "@components/webLinks/WebLinks";
+import { WebLinksProps } from "@components/webLinks/WebLinks";
 
-type CardImageType = WebLinksType;
+type CardImageProps = WebLinksProps;
 
-const CardImage: React.FC<CardImageType> = (props) => {
+const CardImage = (props: CardImageProps) => {
   const backgroundImageDiv = (
     <div
       className="img-div"

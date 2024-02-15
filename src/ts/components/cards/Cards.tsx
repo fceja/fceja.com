@@ -1,21 +1,21 @@
 import "@scss/components/Card.scss";
 import CardDetails, {
-  CardDetailsType,
+  cardDetailsProps,
 } from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
-import WebLinks, { WebLinksType } from "@components/webLinks/WebLinks";
+import WebLinks, { WebLinksProps } from "@components/webLinks/WebLinks";
 
-type CardTypeArray = {
+type CardsProps = {
   cardArray: readonly CardType[];
 };
 
 export type CardType = {
-  cardDetails: CardDetailsType;
+  cardDetails: cardDetailsProps;
   index: number | null;
-  webLinks: WebLinksType;
+  webLinks: WebLinksProps;
 };
 
-const Cards = (props: CardTypeArray) => {
+const Cards = (props: CardsProps) => {
   return (
     <>
       {props.cardArray.map((card: any, index: any) => {
