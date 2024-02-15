@@ -1,6 +1,6 @@
 import "@scss/components/Card.scss";
 import CardDetails, {
-  cardDetailsProps,
+  CardDetailsProps,
 } from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
 import WebLinks, { WebLinksProps } from "@components/webLinks/WebLinks";
@@ -10,7 +10,7 @@ type CardsProps = {
 };
 
 export type CardType = {
-  cardDetails: cardDetailsProps;
+  cardDetails: CardDetailsProps;
   index: number | null;
   webLinks: WebLinksProps;
 };

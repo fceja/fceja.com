@@ -1,6 +1,6 @@
 import "@scss/components/CardDetails.scss";
 
-export type CardDetailsType = {
+export type CardDetailsProps = {
   title: string;
   description: string;
   listSections: ListSectionType[];
@@ -11,7 +11,7 @@ type ListSectionType = {
   listItems: string[];
 };
 
-const CardDetails: React.FC<CardDetailsType> = (cardDetailsProps) => {
+const CardDetails = (props: CardDetailsProps) => {
   const generateListItems = (listItems: string[]) => {
     const generateSubList = () => {
       return (
