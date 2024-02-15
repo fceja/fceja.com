@@ -6,7 +6,7 @@ import { CardsData } from "@data/CardData";
 import Cards from "@components/cards/Cards";
 import { ScrollLeftOrRight } from "@utils/pageActions/ScrollLeftOrRight";
 
-const CardCarousel: React.FC = () => {
+const CardCarousel = () => {
   return (
     <Stack
       className="card-carousel-container"
@@ -17,10 +17,7 @@ const CardCarousel: React.FC = () => {
         className="icon-left"
         onClick={() => ScrollLeftOrRight("left", "cards-container")}
       />
-      <div
-        className="cards-container"
-        id="cards-container"
-      >
+      <div className="cards-container" id="cards-container">
         <Cards cardArray={CardsData}></Cards>
       </div>
       <MdChevronRight

@@ -6,7 +6,7 @@ export type WebLinksType = {
   urlLink: string | null;
 };
 
-const WebLinks: React.FC<WebLinksType> = (props) => {
+const WebLinks = (props: WebLinksType) => {
   return (
     <>
       {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.  */}

@@ -15,10 +15,12 @@ export type CardType = {
   webLinks: WebLinksType;
 };
 
-const Cards: React.FC<CardTypeArray> = ({ cardArray }) => {
+const Cards = (props: CardTypeArray) => {
   return (
     <>
-      {cardArray.map((card: any, index: any) => {
+      {props.cardArray.map((card: any, index: any) => {
+        {
+        }
         return (
           <div
             key={`card-${index}`}
