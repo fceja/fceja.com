@@ -14,7 +14,7 @@ const SubSection = (props: SubSectionProps) => {
   });
 
   return (
-    <section className="sub-section">
+    <section className="sub-section shadow">
       <h2 className="sub-heading">{props.title}</h2>
       <p className="p-contents">{anchorTags}</p>
     </section>

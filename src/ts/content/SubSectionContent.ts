@@ -201,13 +201,86 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
       ],
     },
     {
-      title: "Title 2",
+      title: "Database",
       anchorTagData: [
         {
-          href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          href: "https://www.postgresql.org/",
           img: {
-            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg",
-            alt: "javascript",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg",
+            alt: "posgres",
+          },
+        },
+        {
+          href: "https://www.mysql.com/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+            alt: "mysql",
+          },
+        },
+        {
+          href: "https://www.sqlite.org/index.html",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+            alt: "sqlite",
+          },
+        },
+        {
+          href: "https://graphql.org/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg",
+            alt: "graphql",
+          },
+        },
+      ],
+    },
+    {
+      title: "Cloud",
+      anchorTagData: [
+        {
+          href: "https://aws.amazon.com/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+            alt: "aws",
+          },
+        },
+        {
+          href: "https://www.heroku.com/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg",
+            alt: "heroku",
+          },
+        },
+      ],
+    },
+    {
+      title: "Miscellaneous",
+      anchorTagData: [
+        {
+          href: "https://www.postman.com/",
+          img: {
+            src: "https://www.postman.com/_ar-assets/images/favicon-1-48.png",
+            alt: "postman",
+          },
+        },
+        {
+          href: "https://www.docker.com/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg",
+            alt: "docker",
+          },
+        },
+        {
+          href: "https://www.jenkins.io",
+          img: {
+            src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
+            alt: "jenkins",
+          },
+        },
+        {
+          href: "https://www.linux.org/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+            alt: "linux",
           },
         },
       ],
