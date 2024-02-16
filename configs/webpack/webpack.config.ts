@@ -49,6 +49,9 @@ const config = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
+    new Dotenv({
+      path: ".env",
+    }),
     // set html index
     new HtmlWebpackPlugin({
       template: "./public/index.html",
