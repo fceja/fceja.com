@@ -1,3 +1,4 @@
+import Dotenv from "dotenv-webpack";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
