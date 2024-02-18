@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
+import "@scss/components/Headlines.scss";
 import Loading from "@common/components/Loading";
-
-const apiUrl = "";
 
 type ResponseData = {
   status: string;
@@ -10,13 +9,17 @@ type ResponseData = {
     {
       source: { name: string };
       title: string;
+      url: string;
     },
   ];
 };
 
 const Headlines = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [headlines, setHeadlines] = useState<string[]>([]);
+  const [headlineElems, setHeadLineElems] = useState<JSX.Element[]>([]);
+  const [headlines, setHeadlines] = useState<{ source: string; url: string }[]>(
+    [],
+  );
   const [responseData, setResponseData] = useState<ResponseData | null>(null);
 
   useEffect(() => {
@@ -24,17 +27,34 @@ const Headlines = () => {
 
     responseData.articles.forEach((article) => {
       if (article.title.includes("Removed")) {
-        return; // continue
+        return;
       }
+
       setHeadlines((headlines) => [
         ...headlines,
-        `${article.source.name} - ${article.title}`,
+        {
+          source: `${article.title}`,
+          url: article.url,
+        },
       ]);
     });
   }, [responseData]);
 
   useEffect(() => {
-    console.log(`headlines 3-> ${headlines}`);
+    const headlineElems = headlines.map((elem, index) => {
+      return (
+        <li key={index}>
+          <a
+            href={`${elem.url}`}
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "black" }}
+          >{`${elem.source}`}</a>
+        </li>
+      );
+    });
+
+    setHeadLineElems(headlineElems);
   }, [headlines]);
 
   useEffect(() => {
@@ -43,6 +63,15 @@ const Headlines = () => {
     // fetch data
     const fetchData = async () => {
       try {
+        // generate api url
+        const endpoint = "top-headlines";
+        const country = "country=us";
+        const category = "category=business";
+        const queryParams = `${category}&${country}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
+
+        const apiUrl = `${process.env.REACT_APP_NEWS_API_BASE_URL}/${endpoint}?${queryParams}`;
+
+        // fetch data
         const response = await fetch(apiUrl);
         const data = await response.json();
         setResponseData(data);
@@ -56,9 +85,8 @@ const Headlines = () => {
   }, []);
 
   return (
-    <div>
-      Headlines
-      <Loading />
+    <div className="scroll-container">
+      {isLoading ? <Loading /> : <ul className="link-list">{headlineElems}</ul>}
     </div>
   );
 };

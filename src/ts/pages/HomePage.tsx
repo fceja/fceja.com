@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import "@scss/pages/HomePage.scss";
 import Loading from "@common/components/Loading";
+import Footer from "@common/components/Footer";
 import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
 import SubSection from "@components/subSection/SubSection";
@@ -20,6 +21,7 @@ const HomePage = () => {
       <Greeting />
       <Intro />
       {subSectionElems}
+      <Footer />
     </div>
   );
 };

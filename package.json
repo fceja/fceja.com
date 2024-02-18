@@ -23,6 +23,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/animejs": "^3.1.12",
     "@types/customize-cra": "^1.0.7",
+    "@types/dotenv-webpack": "^7.0.7",
     "@types/jest": "^29.5.5",
     "@types/node": "^16.18.44",
     "@types/react": "^18.2.21",

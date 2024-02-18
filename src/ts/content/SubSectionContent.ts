@@ -164,6 +164,13 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
           },
         },
         {
+          href: "https://graphql.org/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg",
+            alt: "graphql",
+          },
+        },
+        {
           href: "https://nodemailer.com/",
           img: {
             src: "https://nodemailer.com/favicon-96x96.png",
@@ -222,13 +229,6 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
           img: {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
             alt: "sqlite",
-          },
-        },
-        {
-          href: "https://graphql.org/",
-          img: {
-            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain-wordmark.svg",
-            alt: "graphql",
           },
         },
       ],
