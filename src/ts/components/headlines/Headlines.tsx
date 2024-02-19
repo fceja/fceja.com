@@ -58,6 +58,12 @@ const Headlines = () => {
   }, [headlines]);
 
   useEffect(() => {
+    const storedData = sessionStorage.getItem("responseData");
+    if (storedData) {
+      setResponseData(JSON.parse(storedData));
+      return;
+    }
+
     setIsLoading(true);
 
     // fetch data
@@ -75,6 +81,7 @@ const Headlines = () => {
         const response = await fetch(apiUrl);
         const data = await response.json();
         setResponseData(data);
+        sessionStorage.setItem("responseData", JSON.stringify(data));
       } catch (error) {
         console.error(error);
       } finally {
