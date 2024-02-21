@@ -11,7 +11,7 @@ const CardCarousel = () => {
       <div className="left-container">
         <MdChevronLeft
           className="icon-left"
-          onClick={() => ScrollLeftOrRight("left", "cards-carousel-container")}
+          onClick={() => ScrollLeftOrRight("left", "cards-container")}
         />
       </div>
       <div className="cards-container" id="cards-container">
@@ -20,7 +20,7 @@ const CardCarousel = () => {
       <div className="right-container">
         <MdChevronRight
           className="icon-right"
-          onClick={() => ScrollLeftOrRight("right", "cards-carousel-container")}
+          onClick={() => ScrollLeftOrRight("right", "cards-container")}
         />
       </div>
     </div>

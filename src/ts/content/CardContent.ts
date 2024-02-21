@@ -212,7 +212,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Miscellaneous",
-          listItems: ["CORS enabled, BCrypt, Session, JWT"],
+          listItems: ["CORS, BCrypt, Session, JWT"],
         },
       ],
     },
