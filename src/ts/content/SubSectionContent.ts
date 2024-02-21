@@ -94,31 +94,10 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
           },
         },
         {
-          href: "https://webpack.js.org",
-          img: {
-            src: "https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg",
-            alt: "webpack",
-          },
-        },
-        {
-          href: "https://babeljs.io/",
-          img: {
-            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
-            alt: "babel",
-          },
-        },
-        {
           href: "https://jquery.com/",
           img: {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original-wordmark.svg",
             alt: "jquery",
-          },
-        },
-        {
-          href: "https://git-scm.com/",
-          img: {
-            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg",
-            alt: "git",
           },
         },
         {
@@ -256,10 +235,24 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
       title: "Miscellaneous",
       anchorTagData: [
         {
-          href: "https://www.postman.com/",
+          href: "https://git-scm.com/",
           img: {
-            src: "https://www.postman.com/_ar-assets/images/favicon-1-48.png",
-            alt: "postman",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg",
+            alt: "git",
+          },
+        },
+        {
+          href: "https://webpack.js.org",
+          img: {
+            src: "https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg",
+            alt: "webpack",
+          },
+        },
+        {
+          href: "https://babeljs.io/",
+          img: {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/babel/babel-original.svg",
+            alt: "babel",
           },
         },
         {
@@ -274,6 +267,13 @@ export const SubSectionContent: Readonly<SubSectionContentProps[]> =
           img: {
             src: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg",
             alt: "jenkins",
+          },
+        },
+        {
+          href: "https://www.postman.com/",
+          img: {
+            src: "https://www.postman.com/_ar-assets/images/favicon-1-48.png",
+            alt: "postman",
           },
         },
         {

@@ -16,12 +16,10 @@ const Intro = () => {
       <div className="intro-container shadow init-hidden init-zero-opac">
         <SocialLinks />
         <p className="intro-text">
-          You can view some of my projects:
-          <br />
-          <a href={`${PAGE_PATHS.PROJECTS}`}>here</a>
+          View some of my <a href={`${PAGE_PATHS.PROJECTS}`}>projects</a>
         </p>
         <p className="intro-text">
-          Tools and Technologies I've worked with... ↓
+          Tools and Technologies I've worked with... &darr;
         </p>
       </div>
     </>

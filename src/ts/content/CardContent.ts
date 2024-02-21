@@ -361,7 +361,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
   {
     cardDetails: {
       title: "Dice Game",
-      description: "A poker style game with Dice.",
+      description: "A poker style game with dice.",
       listSections: [
         {
           title: "Language",
