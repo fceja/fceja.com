@@ -35,7 +35,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
     webLinks: {
       gitHubLink: "https://github.com/fceja/fceja.com",
       imageUrl: null,
-      urlLink: "https://fceja.com",
+      urlLink: "/",
     },
   },
   {

@@ -2,12 +2,7 @@
 
 .social-links {
   display: flex;
-  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
-    justify-content: center;
-  }
-  @media (min-width: $breakpoint-sm) {
-    justify-content: flex-end;
-  }
+  justify-content: center;
 }
 
 .linked-in {

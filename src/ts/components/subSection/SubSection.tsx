@@ -1,10 +1,15 @@
 import "@scss/components/SubSection.scss";
-
+import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity.hook";
 import { SubSectionContentProps } from "@content/SubSectionContent";
 
 type SubSectionProps = SubSectionContentProps;
 
 const SubSection = (props: SubSectionProps) => {
+  const divClassName = "sub-section";
+  const isGreetAnimeDone = useIncreaseOpacity({
+    htmlElemClassName: divClassName,
+  });
+
   const anchorTags = props.anchorTagData.map((elem, i) => {
     return (
       <a key={`${i}-a-img`} href={elem.href} target="_blank" rel="noreferrer">
@@ -14,7 +19,7 @@ const SubSection = (props: SubSectionProps) => {
   });
 
   return (
-    <section className="sub-section shadow">
+    <section className="sub-section shadow init-zero-opac">
       <h2 className="sub-heading">{props.title}</h2>
       <p className="p-contents">{anchorTags}</p>
     </section>

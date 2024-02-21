@@ -11,7 +11,7 @@ import { SubSectionContent } from "@content/SubSectionContent";
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-  const subSectionElems = SubSectionContent.map((elem, index) => {
+  const SubSectionElems = SubSectionContent.map((elem, index) => {
     return <SubSection key={index} {...elem} />;
   });
 
@@ -20,7 +20,7 @@ const HomePage = () => {
       {isLoading && <Loading />}
       <Greeting />
       <Intro />
-      {subSectionElems}
+      {SubSectionElems}
       <Footer />
     </div>
   );
