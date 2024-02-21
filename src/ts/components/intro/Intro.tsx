@@ -43,7 +43,7 @@ const Intro = () => {
         <p className="intro-text">
           You can view some of my projects:
           <br />
-          <a href="https://fceja.com/projects">here</a>
+          <a href={`${PAGE_PATHS.PROJECTS}`}>here</a>
         </p>
         <p className="intro-text">
           Tools and Technologies I've worked with... ↓
