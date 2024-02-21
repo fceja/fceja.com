@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "@scss/pages/HomePage.scss";
 import Loading from "@common/components/Loading";
-import Footer from "@common/components/Footer";
+import Footer from "@components/Footer/Footer";
 import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
 import SubSection from "@components/subSection/SubSection";
