@@ -45,7 +45,7 @@ const CardDetails = (props: CardDetailsProps) => {
   const listComponent = generateListComponent();
 
   return (
-    <div>
+    <div className="card-details">
       <p className="title text-center text-wrap">{props.title}</p>
       <p className="description text-wrap">{props.description}</p>
       <ul className="list-container">{listComponent}</ul>

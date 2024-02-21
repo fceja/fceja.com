@@ -9,18 +9,11 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Frontend",
-          listItems: [
-            "TypeScript",
-            "React",
-            "Axios",
-            "Bootstrap",
-            "HTML",
-            "SCSS",
-          ],
+          listItems: ["TypeScript, React, Axios", "Bootstrap", "HTML", "SCSS"],
         },
         {
           title: "Cloud - AWS",
-          listItems: ["S3", "CloudFront", "Route53"],
+          listItems: ["S3, CloudFront, Route53"],
         },
         {
           title: " Build / Bundle",
@@ -66,9 +59,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
     cardDetails: {
       title: "User Forum App",
       description:
-        "A forum-like app. Standard users have the ability to:\
-        create an account, log in, create posts, and view community posts on the homepage.\
-        Moderators can do the same, as well as ban users or delete posts.",
+        "A forum-like app were Standard and Mod users can create and edit posts.",
       listSections: [
         {
           title: "Demo Creds",
@@ -77,9 +68,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         {
           title: "Frontend",
           listItems: [
-            "Python",
-            "Django",
-            "Django Crispy Forms",
+            "Python, Django, Crispy Forms",
             "Bootstrap",
             "HTML",
             "CSS",
@@ -91,7 +80,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Cloud - Heroku",
-          listItems: ["Heroku Postgres", "Heroku Dyno"],
+          listItems: ["Postgres, Dynos"],
         },
       ],
     },
@@ -111,15 +100,15 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Backend",
-          listItems: ["TypeScript", "NodeJS", "ExpessJS", "Nodemailer"],
+          listItems: ["TypeScript, Node, Express, Nodemailer"],
         },
         {
           title: "Cloud - AWS",
-          listItems: ["API Gateway", "Lambda"],
+          listItems: ["API Gateway, Lambda"],
         },
         {
           title: "Miscellaneous",
-          listItems: ["Restful", "API key required", "CORS enabled"],
+          listItems: ["Restful, API key, CORS"],
         },
       ],
     },
@@ -134,19 +123,13 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
   {
     cardDetails: {
       title: "Profile App",
-      description:
-        "A web app that can be used for a user/company profile.\
-        Features a home, gallery, and contact page.\
-         After submitting, contact form pings the Emailer API, where an email is generated and sent to the webpage owner.",
+      description: "A web app that can be used for a user/company profile.",
       listSections: [
         {
           title: "FrontEnd",
           listItems: [
-            "TypeScript",
-            "React",
-            "Axios",
+            "TypeScript, React, Redux, Axios",
             "Bootstrap",
-            "Redux",
             "HTML",
             "SCSS",
           ],
@@ -157,7 +140,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Miscellaneous",
-          listItems: ["Responsive", "Evolving project"],
+          listItems: ["Responsive, Evolving project"],
         },
       ],
     },
@@ -175,7 +158,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       title: "Geolocation & IP App",
       description:
         "After logging in, clicking the 'Get My Location' button will retreive users\
-      geo-coordinates and IP info (requests user permission).",
+      geo-coordinates and IP info.",
       listSections: [
         {
           title: "Demo Creds",
@@ -184,13 +167,10 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         {
           title: "Frontend",
           listItems: [
-            "TypeScript",
-            "React",
-            "Axios",
+            "TypeScript, React, Axios, Google Maps",
             "Bootstrap / React Bootstrap",
             "HTML",
             "SCSS",
-            "Google Maps",
           ],
         },
         {
@@ -199,14 +179,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Cloud - AWS",
-          listItems: [
-            "S3",
-            "API Gateway",
-            "Lambda",
-            "RDS",
-            "CloudFront",
-            "Route53",
-          ],
+          listItems: ["S3, API Gateway, Lambda, RDS, CloudFront, Route53"],
         },
         {
           title: "Build / Bundle",
@@ -231,7 +204,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Backend",
-          listItems: ["TypeScript", "NodeJS", "ExpressJS", "JSON Web Token"],
+          listItems: ["TypeScript, Node, Express", "NodeJS", "ExpressJS"],
         },
         {
           title: "Database",
@@ -239,7 +212,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Miscellaneous",
-          listItems: ["CORS enabled", "Bcrypt", "Session"],
+          listItems: ["CORS enabled, BCrypt, Session, JWT"],
         },
       ],
     },
@@ -287,13 +260,10 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         {
           title: "Frontend",
           listItems: [
-            "TypeScript",
-            "React",
-            "Axios",
+            "TypeScript, React, Axios, Google Maps",
             "Bootstrap",
             "HTML",
             "SCSS",
-            "Google Maps",
           ],
         },
         {
@@ -302,7 +272,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
         },
         {
           title: "Cloud - AWS",
-          listItems: ["S3", "API Gateway", "Lambda", "RDS"],
+          listItems: ["S3, API Gateway, Lambda, RDS"],
         },
         {
           title: "Build / Bundle",
@@ -326,7 +296,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Frontend",
-          listItems: ["JavaScript", "React", "HTML", "CSS"],
+          listItems: ["JavaScript, React", "HTML", "CSS"],
         },
       ],
     },
@@ -390,7 +360,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Backend",
-          listItems: ["Go (Golang)", "JSON Web Token"],
+          listItems: ["Go (Golang)", "JWT"],
         },
         {
           title: "Database",
@@ -437,7 +407,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Frontend",
-          listItems: ["JavaScript", "JQuery", "HTML", "CSS"],
+          listItems: ["JavaScript, JQuery", "HTML", "CSS"],
         },
       ],
     },

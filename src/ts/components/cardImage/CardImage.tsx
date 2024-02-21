@@ -18,7 +18,7 @@ const CardImage = (props: CardImageProps) => {
 
   return !props.imageUrl ? (
     // imageUrl is null, return empty div with formatting
-    <div className="pt-3"></div>
+    <div className="img-link-container pt-3"></div>
   ) : (
     // imageUrl exists
     <div className="img-link-container">

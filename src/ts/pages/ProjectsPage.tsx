@@ -8,10 +8,7 @@ import { PAGE_PATHS } from "@common/Constants";
 const ProjectsPage = () => {
   return (
     <Container fluid className="index-page">
-      <p
-        className="intro d-flex align-items-center justify-content-center m-0"
-        id="greeting-text"
-      >
+      <p className="intro" id="projects-page-greeting-text">
         <span>
           Greetings,
           <em>
@@ -23,7 +20,7 @@ const ProjectsPage = () => {
       <SocialLinks />
       <CardCarousel />
       <a className="home-link" href={`${PAGE_PATHS.HOME}`}>
-        Home page
+        Home
       </a>
     </Container>
   );

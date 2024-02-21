@@ -1,13 +1,17 @@
 @import "../Variables.scss";
 
-.card-carousel-container {
+.carousel-container {
   width: 95%;
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
+  background-color: yellow;
+  display: flex;
 }
 
 .cards-container {
+  height: 100%;
+  background-color: yellowgreen;
   width: 100vw;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -15,10 +19,23 @@
   margin: 0;
   display: flex;
   align-items: center;
-  align-items: flex-center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
     align-items: flex-start;
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+div {
+  .left-container,
+  .right-container {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -26,4 +43,8 @@
   height: 100px;
   width: 50px;
   color: $chevrons-gray;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
