@@ -1,28 +1,26 @@
 .sub-section {
-    box-sizing: border-box;
-    background-color: #1b263b;
-    font-size: 1.5em;
-    padding: 20px;
-    margin-top: 30px;
+  box-sizing: border-box;
+  background-color: #1b263b;
+  font-size: 1.5em;
+  padding: 20px;
 }
 
 .sub-heading {
-    color: white;
-    text-align: center;
-    font-weight: 800;
+  color: white;
+  text-align: center;
+  font-weight: 800;
 }
 
 .p-contents {
-    background-color: white;
-    color: black;
-    margin: 20px;
-    padding: 20px;
-    // padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  background-color: white;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 a {
-    margin: 15px;
+  margin: 15px;
 }

@@ -1,27 +1,25 @@
 @import "../Variables.scss";
 
 .intro-container {
-    position: relative;
-    margin-left: auto;
-    margin-right: 15px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 15px;
+  margin-top: 30px;
+  margin-bottom: 75px;
 
-    @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
-        padding: 5px;
-        height: 150px;
-        width: 200px;
-    }
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
+    padding: 5px;
+    width: 200px;
+  }
 
-    @media (min-width: $breakpoint-sm) {
-        height: 400px;
-        width: 400px;
-    }
+  @media (min-width: $breakpoint-sm) {
+    width: 400px;
+  }
 }
 
 .intro-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

@@ -1,9 +1,29 @@
 @import "../Variables.scss";
 
-.linked-in-icon {
-  fill: $linked-in-blue;
+.social-links {
+  display: flex;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
+    justify-content: center;
+  }
+  @media (min-width: $breakpoint-sm) {
+    justify-content: flex-end;
+  }
 }
 
-.github-profile-icon {
-  fill: $github-purple-profile;
+.linked-in {
+  &-icon {
+    height: 100% !important;
+  }
+  &-link {
+    fill: $linked-in-blue;
+  }
+}
+
+.github-profile {
+  &-icon {
+    height: 100% !important;
+  }
+  &-link {
+    fill: $github-purple-profile;
+  }
 }

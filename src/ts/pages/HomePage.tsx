@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "@scss/pages/HomePage.scss";
 import Loading from "@common/components/Loading";
