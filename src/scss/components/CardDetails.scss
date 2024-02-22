@@ -5,10 +5,10 @@ div.card-details {
 }
 
 p.title {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
 
-  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
     font-size: 1.3em;
   }
 }
@@ -17,11 +17,11 @@ p.description {
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: rgb(117, 116, 116);
 
-  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
-    font-size: 1em;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
+    font-size: 1.1em;
   }
 }
 
@@ -39,16 +39,16 @@ ul.sub-list {
 li strong.list-sec-title {
   font-weight: 600;
 
-  font-size: 0.75em;
-  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
+  font-size: 0.9em;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
     font-size: 1em;
   }
 }
 
 ul.sub-list li {
   color: rgb(117, 116, 116);
-  font-size: 0.75em;
-  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-xs) {
+  font-size: 0.8em;
+  @media (min-width: $breakpoint-zero) and (max-width: $breakpoint-sm) {
     font-size: 1em;
   }
 }
