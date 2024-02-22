@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "@scss/pages/HomePage.scss";
 import Loading from "@common/components/Loading";
@@ -9,7 +9,19 @@ import SubSection from "@components/subSection/SubSection";
 import { SubSectionContent } from "@content/SubSectionContent";
 
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isGreetAnimeDone, setIsGreetAnimeDone] = useState<boolean>(false);
+
+  /* monitors animation until it's complete */
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const animationElems = document.getElementsByClassName("h1-greeting");
+
+      if (animationElems.length === 0) {
+        clearInterval(intervalId);
+        setIsGreetAnimeDone(true);
+      }
+    }, 500);
+  }, []);
 
   const SubSectionElems = SubSectionContent.map((elem, index) => {
     return <SubSection key={index} {...elem} />;
@@ -17,11 +29,11 @@ const HomePage = () => {
 
   return (
     <div className="home-page-container">
-      {isLoading && <Loading />}
+      {!isGreetAnimeDone ? <Loading /> : null}
       <Greeting />
-      <Intro />
-      {SubSectionElems}
-      <Footer />
+      {!isGreetAnimeDone ? null : <Intro />}
+      {!isGreetAnimeDone ? null : SubSectionElems}
+      {!isGreetAnimeDone ? null : <Footer />}
     </div>
   );
 };

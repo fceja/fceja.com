@@ -5,24 +5,7 @@ interface UseIncreaseOpacityProps {
 }
 
 export const useIncreaseOpacity = (prop: UseIncreaseOpacityProps) => {
-  const [isGreetAnimeDone, setIsGreetAnimeDone] = useState<boolean>(false);
-
-  const greetingClassName = "h1-greeting";
-
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      const animationElems = document.getElementsByClassName(greetingClassName);
-
-      if (animationElems.length === 0) {
-        clearInterval(intervalId);
-        setIsGreetAnimeDone(true);
-      }
-    }, 500);
-  }, []);
-
-  useEffect(() => {
-    if (!isGreetAnimeDone) return;
-
     const divElems = document.getElementsByClassName(prop.htmlElemClassName);
 
     if (divElems.length != 0) {
@@ -37,7 +20,5 @@ export const useIncreaseOpacity = (prop: UseIncreaseOpacityProps) => {
         }, 80);
       });
     }
-  }, [isGreetAnimeDone]);
-
-  return isGreetAnimeDone;
+  }, []);
 };

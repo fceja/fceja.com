@@ -6,23 +6,20 @@ import { PAGE_PATHS } from "@common/Constants";
 import SocialLinks from "@components/socialLinks/SocialLinks";
 
 const Intro = () => {
-  const divClassName = "intro-container";
-  const isGreetAnimeDone = useIncreaseOpacity({
-    htmlElemClassName: divClassName,
+  useIncreaseOpacity({
+    htmlElemClassName: "intro-container",
   });
 
-  return !isGreetAnimeDone ? null : (
-    <>
-      <div className="intro-container shadow init-hidden init-zero-opac">
-        <SocialLinks />
-        <p className="intro-text">
-          View some of my <a href={`${PAGE_PATHS.PROJECTS}`}>projects</a>.
-        </p>
-        <p className="intro-text">
-          Tools and Technologies I've worked with... &darr;
-        </p>
-      </div>
-    </>
+  return (
+    <div className="intro-container shadow init-hidden init-zero-opac">
+      <SocialLinks />
+      <p className="intro-text">
+        View some of my <a href={`${PAGE_PATHS.PROJECTS}`}>projects</a>.
+      </p>
+      <p className="intro-text">
+        Tools and Technologies I've worked with... &darr;
+      </p>
+    </div>
   );
 };
 

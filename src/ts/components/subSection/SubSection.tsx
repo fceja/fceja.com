@@ -5,9 +5,8 @@ import { SubSectionContentProps } from "@content/SubSectionContent";
 type SubSectionProps = SubSectionContentProps;
 
 const SubSection = (props: SubSectionProps) => {
-  const divClassName = "sub-section";
-  const isGreetAnimeDone = useIncreaseOpacity({
-    htmlElemClassName: divClassName,
+  useIncreaseOpacity({
+    htmlElemClassName: "sub-section",
   });
 
   const anchorTags = props.anchorTagData.map((elem, i) => {
@@ -19,7 +18,7 @@ const SubSection = (props: SubSectionProps) => {
   });
 
   return (
-    <section className="sub-section shadow init-zero-opac">
+    <section className="sub-section init-zero-opac">
       <h2 className="sub-heading">{props.title}</h2>
       <p className="p-contents">{anchorTags}</p>
     </section>
