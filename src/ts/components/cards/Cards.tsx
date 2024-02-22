@@ -26,7 +26,7 @@ const Cards = (props: CardsProps) => {
             key={`card-${index}`}
             id={`card-${index}`}
             data-testid="card"
-            className="card ms-2 me-3"
+            className="card ms-2 me-3 shadow"
           >
             <CardImage {...card.webLinks} />
             <CardDetails {...card.cardDetails} />
