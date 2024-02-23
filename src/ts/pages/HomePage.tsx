@@ -5,6 +5,7 @@ import Loading from "@common/components/Loading";
 import Footer from "@components/Footer/Footer";
 import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
+import Loading from "@common/components/Loading";
 import SubSection from "@components/subSection/SubSection";
 import { SubSectionContent } from "@content/SubSectionContent";
 
