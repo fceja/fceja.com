@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import "@scss/pages/HomePage.scss";
-import Loading from "@common/components/Loading";
 import Footer from "@components/Footer/Footer";
 import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
@@ -30,11 +29,11 @@ const HomePage = () => {
 
   return (
     <div className="home-page-container">
-      {!isGreetAnimeDone ? <Loading /> : null}
+      {!isGreetAnimeDone && <Loading />}
       <Greeting />
-      {!isGreetAnimeDone ? null : <Intro />}
-      {!isGreetAnimeDone ? null : SubSectionElems}
-      {!isGreetAnimeDone ? null : <Footer />}
+      {isGreetAnimeDone && <Intro />}
+      {isGreetAnimeDone && SubSectionElems}
+      {isGreetAnimeDone && <Footer />}
     </div>
   );
 };
