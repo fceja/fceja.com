@@ -4,11 +4,10 @@ import "@scss/components/Headlines.scss";
 import Loading from "@common/components/Loading";
 
 type ResponseData = {
-  status: string;
-  articles: [
+  data: [
     {
-      source: { name: string };
       title: string;
+      source: string;
       url: string;
     },
   ];
