@@ -22,17 +22,12 @@ const Headlines = () => {
   const [responseData, setResponseData] = useState<ResponseData | null>(null);
 
   useEffect(() => {
-    if (!responseData || responseData.status !== "ok") return;
-
-    responseData.articles.forEach((article) => {
-      if (article.title.includes("Removed")) {
-        return;
-      }
-
+    if (!responseData || responseData.data.length <= 0) return;
+    responseData.data.forEach((article) => {
       setHeadlines((headlines) => [
         ...headlines,
         {
-          source: `${article.title}`,
+          source: `${article.title} - ${article.source}`,
           url: article.url,
         },
       ]);
@@ -68,13 +63,7 @@ const Headlines = () => {
     // fetch data
     const fetchData = async () => {
       try {
-        // generate api url
-        const endpoint = "top-headlines";
-        const country = "country=us";
-        const category = "category=business";
-        const queryParams = `${category}&${country}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
-
-        const apiUrl = `${process.env.REACT_APP_NEWS_API_BASE_URL}/${endpoint}?${queryParams}`;
+        const apiUrl = `https://uherlh9b5l.execute-api.us-west-1.amazonaws.com/dev/news/top`;
 
         // fetch data
         const response = await fetch(apiUrl);
