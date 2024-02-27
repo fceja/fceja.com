@@ -63,7 +63,7 @@ const Headlines = () => {
     // fetch data
     const fetchData = async () => {
       try {
-        const apiUrl = `https://uherlh9b5l.execute-api.us-west-1.amazonaws.com/dev/news/top`;
+        const apiUrl = `${process.env.REACT_APP_AWS_API_URL}/news/top`;
 
         // fetch data
         const response = await fetch(apiUrl);
