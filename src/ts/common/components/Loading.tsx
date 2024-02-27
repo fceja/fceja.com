@@ -1,8 +1,14 @@
 import "@scss/common/components/Loading.scss";
 
-const Loading = () => {
+interface LoadingProps {
+  className?: string;
+}
+
+const Loading = ({ className }: LoadingProps) => {
+  const divClassName = className || "sk-cube-grid";
+
   return (
-    <div className="sk-cube-grid">
+    <div className={`${divClassName}`}>
       <div className="sk-cube sk-cube1"></div>
       <div className="sk-cube sk-cube2"></div>
       <div className="sk-cube sk-cube3"></div>

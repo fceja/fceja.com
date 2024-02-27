@@ -81,7 +81,11 @@ const Headlines = () => {
 
   return (
     <div className="scroll-container">
-      {isLoading ? <Loading /> : <ul className="link-list">{headlineElems}</ul>}
+      {isLoading ? (
+        <Loading className="headlines-loading" />
+      ) : (
+        <ul className="link-list">{headlineElems}</ul>
+      )}
     </div>
   );
 };
