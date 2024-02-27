@@ -4,13 +4,16 @@ import "@scss/components/Headlines.scss";
 import Loading from "@common/components/Loading";
 
 type ResponseData = {
-  data: [
-    {
-      title: string;
-      source: string;
-      url: string;
-    },
-  ];
+  statusCode: 200;
+  body: {
+    data: [
+      {
+        title: string;
+        source: string;
+        url: string;
+      },
+    ];
+  };
 };
 
 const Headlines = () => {
@@ -22,8 +25,8 @@ const Headlines = () => {
   const [responseData, setResponseData] = useState<ResponseData | null>(null);
 
   useEffect(() => {
-    if (!responseData || responseData.data.length <= 0) return;
-    responseData.data.forEach((article) => {
+    if (!responseData || responseData.statusCode != 200) return;
+    responseData.body.data.forEach((article) => {
       setHeadlines((headlines) => [
         ...headlines,
         {
