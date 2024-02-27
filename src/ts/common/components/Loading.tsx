@@ -5,10 +5,10 @@ interface LoadingProps {
 }
 
 const Loading = ({ className }: LoadingProps) => {
-  const divClassName = className || "sk-cube-grid";
+  const divClassName = className || "";
 
   return (
-    <div className={`${divClassName}`}>
+    <div className={`sk-cube-grid ${divClassName}`}>
       <div className="sk-cube sk-cube1"></div>
       <div className="sk-cube sk-cube2"></div>
       <div className="sk-cube sk-cube3"></div>
