@@ -7,22 +7,38 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    // "noImplicitAny": true,
-    // "noImplicitReturns": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "outDir": "./dist",
     "paths": {
-      "@common/*": ["./src/ts/common/*"],
-      "@components/*": ["./src/ts/components/*"],
-      "@content/*": ["src/ts/content/*"],
-      "@pages/*": ["./src/ts/pages/*"],
-      "@scss/*": ["./src/scss/*"],
-      "@utils/*": ["./src/ts/utils/*"]
+      "@common/*": [
+        "./src/ts/common/*"
+      ],
+      "@components/*": [
+        "./src/ts/components/*"
+      ],
+      "@content/*": [
+        "src/ts/content/*"
+      ],
+      "@pages/*": [
+        "./src/ts/pages/*"
+      ],
+      "@scss/*": [
+        "./src/scss/*"
+      ],
+      "@utils/*": [
+        "./src/ts/utils/*"
+      ]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
