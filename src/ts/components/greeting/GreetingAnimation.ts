@@ -43,29 +43,23 @@ export const GreetingAnimation = (headings: number) => {
           scaleY: [0, 1],
           opacity: [0.5, 1],
           easing: "easeOutExpo",
-          duration: 900 * (i * 1.4), // delay display
+          duration: 600 * (i * 1.4), // delay display
         })
         .add({
           targets: `.heading-${i} .line${i}`,
           translateX: [0, textWrapper.getBoundingClientRect().width + 10],
           easing: "easeOutExpo",
-          duration: 700,
-          delay: 300,
         })
         .add({
           targets: `.heading-${i} .letter${i}`,
           opacity: [0, 1],
           easing: "easeOutExpo",
-          duration: 600,
           offset: "-=775",
-          delay: (_, i) => 34 * (i + 1),
         })
         .add({
           targets: `.heading-${i}`,
           opacity: 0,
-          duration: 1000,
           easing: "easeOutExpo",
-          delay: 3000, // display duration
         });
     }
   }
