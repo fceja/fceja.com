@@ -1,7 +1,5 @@
 import "@scss/components/Card.scss";
-import CardDetails, {
-  CardDetailsProps,
-} from "@components/cardDetails/CardDetails";
+import CardDetails, { CardDetailsProps } from "@components/cardDetails/CardDetails";
 import CardImage from "@components/cardImage/CardImage";
 import WebLinks, { WebLinksProps } from "@components/webLinks/WebLinks";
 

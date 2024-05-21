@@ -1,13 +1,11 @@
-import Container from "react-bootstrap/Container";
-
 import "@scss/pages/ProjectsPage.scss";
 import CardCarousel from "@components/cardCarousel/CardCarousel";
-import SocialLinks from "@components/socialLinks/SocialLinks";
 import { PAGE_PATHS } from "@common/Constants";
+import SocialLinks from "@components/socialLinks/SocialLinks";
 
 const ProjectsPage = () => {
   return (
-    <Container fluid className="index-page">
+    <>
       <p className="intro" id="projects-page-greeting-text">
         <span>
           Greetings,
@@ -22,7 +20,7 @@ const ProjectsPage = () => {
       <a className="home-link" href={`${PAGE_PATHS.HOME}`}>
         Home
       </a>
-    </Container>
+    </>
   );
 };
 
