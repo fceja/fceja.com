@@ -45,7 +45,7 @@ const Greeting = () => {
         setIsDone(true);
         clearInterval(intervalId);
       }
-    }, 750);
+    }, 300);
   }, [isInitiated]);
 
   return isDone ? null : (

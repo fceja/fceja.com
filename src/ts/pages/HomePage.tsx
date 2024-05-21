@@ -20,7 +20,7 @@ const HomePage = () => {
         clearInterval(intervalId);
         setIsGreetAnimeDone(true);
       }
-    }, 500);
+    }, 300);
   }, []);
 
   const SubSectionElems = SubSectionContent.map((elem, index) => {
@@ -31,9 +31,13 @@ const HomePage = () => {
     <div className="home-page-container">
       {!isGreetAnimeDone && <Loading />}
       <Greeting />
-      {isGreetAnimeDone && <Intro />}
-      {isGreetAnimeDone && SubSectionElems}
-      {isGreetAnimeDone && <Footer />}
+      {isGreetAnimeDone &&
+        <>
+          <Intro />
+          {SubSectionElems}
+          <Footer />
+        </>
+      }
     </div>
   );
 };
