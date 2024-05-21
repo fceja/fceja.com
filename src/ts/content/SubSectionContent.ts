@@ -1,14 +1,14 @@
-export type SubSectionContentProps = {
-  title: string;
-  anchorTagData: AnchorType[];
-};
-
 type AnchorType = {
   href: string;
   img: {
     src: string;
     alt: string;
   };
+};
+
+export type SubSectionContentProps = {
+  title: string;
+  anchorTagData: AnchorType[];
 };
 
 export const SubSectionContent: Readonly<SubSectionContentProps[]> =
