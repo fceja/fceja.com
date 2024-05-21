@@ -30,6 +30,9 @@
       "@content/*": [
         "src/ts/content/*"
       ],
+      "@hooks/*": [
+        "src/ts/hooks/*"
+      ],
       "@pages/*": [
         "./src/ts/pages/*"
       ],

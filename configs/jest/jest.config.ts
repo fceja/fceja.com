@@ -15,6 +15,7 @@ const config: Config.InitialOptions = {
     "^@common/(.*)$": `${projectRoot}/src/ts/common/$1`,
     "^@components/(.*)$": `${projectRoot}/src/ts/components/$1`,
     "^@content/(.*)$": `${projectRoot}/src/ts/data/$1`,
+    "^@hooks/(.*)$": `${projectRoot}/src/ts/hooks/$1`,
     "^@pages/(.*)$": `${projectRoot}/src/ts/pages/$1`,
     "^@scss/(.*)$": "identity-obj-proxy", // Handle SCSS imports with identity-obj-proxy
     "^@appTypes/(.*)$": `${projectRoot}/src/ts/types/$1`,

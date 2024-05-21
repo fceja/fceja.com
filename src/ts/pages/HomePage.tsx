@@ -7,21 +7,10 @@ import Intro from "@components/intro/Intro";
 import Loading from "@common/components/Loading";
 import SubSection from "@components/subSection/SubSection";
 import { SubSectionContent } from "@content/SubSectionContent";
+import useAnimationIsDone from "@hooks/useAnimationIsDone"
 
 const HomePage = () => {
-  const [isGreetAnimeDone, setIsGreetAnimeDone] = useState<boolean>(false);
-
-  /* monitors animation until it's complete */
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const animationElems = document.getElementsByClassName("h1-greeting");
-
-      if (animationElems.length === 0) {
-        clearInterval(intervalId);
-        setIsGreetAnimeDone(true);
-      }
-    }, 300);
-  }, []);
+  const isGreetAnimeDone = useAnimationIsDone()
 
   return (
     <div className="home-page-container">
