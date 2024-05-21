@@ -12,13 +12,12 @@ const HomePage = () => {
 
   return (
     <div className="home-page-container">
-      {!isGreetAnimeDone &&
+      {!isGreetAnimeDone ?
         <>
           <Loading />
           <Greeting />
         </>
-      }
-      {isGreetAnimeDone &&
+        :
         <>
           <Intro />
           <SubSections sectionContent={SubSectionContent} />
