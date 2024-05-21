@@ -1,6 +1,6 @@
 import "@scss/components/Footer.scss";
 import Headlines from "@components/headlines/Headlines";
-import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity.hook";
+import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity";
 
 const Footer = () => {
   const divClassName = "footer";

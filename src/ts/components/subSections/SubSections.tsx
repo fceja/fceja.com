@@ -1,7 +1,7 @@
 import "@scss/components/SubSection.scss";
-import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity.hook";
-import { SubSectionContent } from "@content/SubSectionContent";
 import AnchorTags from "@components/anchorTags/AnchorTags"
+import { SubSectionContent } from "@content/SubSectionContent";
+import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity";
 
 const SubSections = () => {
   useIncreaseOpacity({

@@ -4,7 +4,7 @@ import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
 import Loading from "@common/components/Loading";
 import SubSections from "@components/subSections/SubSections";
-import useAnimationIsDone from "@hooks/useAnimationIsDone"
+import useAnimationIsDone from "@hooks/UseAnimationIsDone"
 
 const HomePage = () => {
   const isGreetAnimeDone = useAnimationIsDone()

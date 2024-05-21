@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "@scss/components/Intro.scss";
-import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity.hook";
+import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity";
 import SocialLinks from "@components/socialLinks/SocialLinks";
 
 const Intro = () => {
