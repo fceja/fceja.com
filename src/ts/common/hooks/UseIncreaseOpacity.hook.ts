@@ -12,7 +12,9 @@ export const useIncreaseOpacity = (prop: UseIncreaseOpacityProps) => {
       Array.from(divElems).forEach((elem) => {
         const divElem = elem as HTMLElement;
         divElem.style.display = "block";
+
         let cur_opacity = 0.0;
+
         const intervalId = setInterval(() => {
           if (cur_opacity > 1.0) clearInterval(intervalId);
           divElem.style.opacity = `${cur_opacity}`;

@@ -4,7 +4,6 @@ import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
 import Loading from "@common/components/Loading";
 import SubSections from "@components/subSections/SubSections";
-import { SubSectionContent } from "@content/SubSectionContent";
 import useAnimationIsDone from "@hooks/useAnimationIsDone"
 
 const HomePage = () => {
@@ -20,7 +19,7 @@ const HomePage = () => {
         :
         <>
           <Intro />
-          <SubSections sectionContent={SubSectionContent} />
+          <SubSections />
           <Footer />
         </>
       }

@@ -1,10 +1,6 @@
 import "@scss/components/SubSection.scss";
 import { useIncreaseOpacity } from "@common/hooks/UseIncreaseOpacity.hook";
-import { SubSectionContentProps } from "@content/SubSectionContent";
-
-interface SubSectionProps {
-  sectionContent: Readonly<SubSectionContentProps[]>
-}
+import { SubSectionContent, SubSectionContentProps } from "@content/SubSectionContent";
 
 const getAnchorTags = (data: SubSectionContentProps) => {
   const aTags = data.anchorTagData.map((elem, i) => {
@@ -18,17 +14,15 @@ const getAnchorTags = (data: SubSectionContentProps) => {
   return aTags
 }
 
-const SubSections = (props: SubSectionProps) => {
+const SubSections = () => {
   useIncreaseOpacity({
     htmlElemClassName: "sub-section",
   });
 
-  const { sectionContent } = props
-
   return (
     <>
       {
-        sectionContent.map((elem, i) => {
+        SubSectionContent.map((elem, i) => {
           const anchorTags = getAnchorTags(elem)
 
           return (
