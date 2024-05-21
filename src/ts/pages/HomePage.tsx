@@ -23,18 +23,20 @@ const HomePage = () => {
     }, 300);
   }, []);
 
-  const SubSectionElems = SubSectionContent.map((elem, index) => {
-    return <SubSection key={index} {...elem} />;
-  });
-
   return (
     <div className="home-page-container">
-      {!isGreetAnimeDone && <Loading />}
-      <Greeting />
+      {!isGreetAnimeDone &&
+        <>
+          <Loading />
+          <Greeting />
+        </>
+      }
       {isGreetAnimeDone &&
         <>
           <Intro />
-          {SubSectionElems}
+          {SubSectionContent.map((elem, index) => {
+            return <SubSection key={index} {...elem} />;
+          })}
           <Footer />
         </>
       }
