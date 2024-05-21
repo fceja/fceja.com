@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "@scss/pages/HomePage.scss";
-import Footer from "@components/Footer/Footer";
+import Footer from "@components/footer/Footer";
 import Greeting from "@components/greeting/Greeting";
 import Intro from "@components/intro/Intro";
 import Loading from "@common/components/Loading";
