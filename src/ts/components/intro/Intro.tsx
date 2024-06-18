@@ -15,7 +15,7 @@ const Intro = () => {
       <p className="intro-text">
         View some of my <Link to="/projects">projects</Link>.
       </p>
-      <p className="intro-text">
+      <p className="intro-text-sub">
         Tools and Technologies I've worked with... &darr;
       </p>
     </div>

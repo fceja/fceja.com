@@ -43,7 +43,7 @@ export const GreetingAnimation = (headings: number) => {
           scaleY: [0, 1],
           opacity: [0.5, 1],
           easing: "easeOutExpo",
-          duration: 600 * (i * 1.4), // delay display
+          duration: 500 * (i * 1.4), // delay display
         })
         .add({
           targets: `.heading-${i} .line${i}`,

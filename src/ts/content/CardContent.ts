@@ -204,7 +204,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
       listSections: [
         {
           title: "Backend",
-          listItems: ["TypeScript, Node, Express", "NodeJS", "ExpressJS"],
+          listItems: ["TypeScript", "NodeJs", "ExpressJS"],
         },
         {
           title: "Database",
