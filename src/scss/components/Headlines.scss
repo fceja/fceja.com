@@ -27,22 +27,18 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
 .sk-cube-grid.headlines-loading {
-  height: 50px;
-  width: 50px;
-  margin: 100px auto;
-}
+  height: 60px;
+  width: 60px;
 
-.sk-cube-grid .sk-cube {
-  width: 33.33%;
-  height: 33.33%;
-  background-color: #717171;
-  float: left;
-  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
-  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  .sk-cube {
+    width: 20px;
+    height: 20px;
+  }
 }
