@@ -10,11 +10,7 @@ const ProjectsPage = () => {
     <>
       <p className="intro" id="projects-page-greeting-text">
         <span>
-          Greetings,
-          <em>
-            <strong> fceja </strong>
-          </em>
-          projects down below.
+          <em><strong> fceja </strong></em> projects down below.
         </span>
       </p>
       <SocialLinks />
