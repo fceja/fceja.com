@@ -1,5 +1,4 @@
 import { CardType } from "@components/cards/Cards";
-import { PAGE_PATHS } from "@common/Constants";
 
 export const CardsContent: Readonly<CardType[]> = Object.freeze([
   {
@@ -29,7 +28,7 @@ export const CardsContent: Readonly<CardType[]> = Object.freeze([
     webLinks: {
       gitHubLink: "https://github.com/fceja/fceja.com",
       imageUrl: null,
-      urlLink: `${PAGE_PATHS.HOME}`,
+      urlLink: "http://dev.client.fceja.s3-website-us-west-1.amazonaws.com/",
     },
   },
   {
