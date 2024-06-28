@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "@scss/pages/ProjectsPage.scss";
 import CardCarousel from "@components/cardCarousel/CardCarousel";
 import { PAGE_PATHS } from "@common/Constants";
@@ -17,9 +19,7 @@ const ProjectsPage = () => {
       </p>
       <SocialLinks />
       <CardCarousel />
-      <a className="home-link" href={`${PAGE_PATHS.HOME}`}>
-        Home
-      </a>
+      <Link className="home-link" to={PAGE_PATHS.HOME}>Home</Link>.
     </>
   );
 };
