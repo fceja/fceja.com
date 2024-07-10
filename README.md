@@ -6,8 +6,7 @@ You can view an implementation here -> [fceja.com](https://fceja.com)
 
 ## Installation
 
-![Linux](https://img.shields.io/badge/OS-Linux-informational?style=flat&logo=linux&logoColor=white&color=eaeaea)
-![MacOS](https://shields.io/badge/OS-MacOS-informational?style=flat&logo=Apple&logoColor=white&color=eaeaea)
+![Unix](https://img.shields.io/badge/Unix-informational?style=flat&logo=unix&logoColor=white&color=eaeaea)
 
 1. Clone repo
 2. Install Node
