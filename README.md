@@ -2,7 +2,7 @@
 
 A carousel that contains cards with details and links for other [@fceja](https://github.com/fceja) projects.
 
-You can view an implementation here -> [fceja.com](https://fceja.com)
+You can view an implementation here -> [fceja.com]([https://fceja.com](http://dev.client.fceja.s3-website-us-west-1.amazonaws.com))
 
 ## Installation
 
