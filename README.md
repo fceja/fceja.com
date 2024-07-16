@@ -20,7 +20,7 @@ You can view an implementation here -> [fceja.com](http://dev.client.fceja.s3-we
    - ```
      npm start
      ```
-   - App will be served on `http://localhost:8080/`
+   - App will be served on `http://localhost:3001/`
 
 ## Technologies & Tools
 
